@@ -1,0 +1,84 @@
+body .edui-editor-bottomContainer { display: none;}
+body .edui-default .edui-editor { border: 1px solid #e7e7eb; background-color: white; position: relative; overflow: visible; border-radius: initial;}
+body .edui-default { border-radius: initial; }
+body .edui-default .edui-toolbar-primary { background-color: #f4f5f9;}
+body .edui-default .edui-editor-toolbarbox { box-shadow: none;}
+body .edui-default .edui-editor-toolbarboxouter { background: #fff;border-bottom: 0;box-shadow: none;}
+body .edui-default .edui-editor-toolbarboxinner { padding: 0;}
+body .edui-default .edui-editor-toolbarboxinner>div { background-color: #f4f5f9; border-bottom: 1px solid #e7e7eb; padding: 1px; height: 30px;}
+body .edui-default .edui-editor-toolbarboxinner>div+div { background-color: #fff; height: 28px; }
+body .edui-default .edui-editor-toolbarbox.not-show-more .edui-editor-toolbarboxinner>div+div { display: none;}
+body .edui-default .edui-toolbar .edui-combox .edui-combox-body { border-radius: 0;}
+
+body .edui-default .edui-popup-content { border-radius: 0;-webkit-box-shadow:none; box-shadow: none; border: 1px solid #e7e7eb;}
+body .edui-default .edui-anchor-topleft .edui-bordereraser { display: none;}
+body .edui-default .edui-menuitem .edui-icon { background: none;}
+
+body .edui-default .edui-toolbar .edui-state-active .edui-splitborder,
+body .edui-default .edui-toolbar .edui-combox-body .edui-arrow,
+body .edui-default .edui-toolbar .edui-state-active .edui-combox-body .edui-arrow,
+body .edui-default .edui-toolbar .edui-state-hover .edui-combox-body .edui-arrow {border-left: 1px solid transparent;}
+body .edui-default .edui-toolbar .edui-combox .edui-combox-body {border: 1px solid #e7e7eb;}
+
+body .edui-default .edui-toolbar .edui-separator {width: 1px; height: 20px; background-color: #e7e7eb; margin: 4px 2px;}
+
+body .edui-default .edui-toolbar .edui-combox-body .edui-button-body { width: 32px; font-size: 12px; height: 26px; line-height: 26px; padding-left: 5px; white-space: nowrap; margin: 0 3px 0 0; vertical-align: middle;}
+
+body .edui-default .edui-toolbar .edui-splitbutton-body .edui-arrow,
+body .edui-default .edui-toolbar .edui-menubutton-body .edui-arrow,
+body .edui-default .edui-toolbar .edui-combox-body .edui-arrow { margin-right: 3px; width: 10px; opacity: 0.6; margin-top: 2px;}
+
+body .edui-default .edui-toolbar .edui-state-hover .edui-combox-body,
+
+body .edui-default .edui-toolbar .edui-splitbutton .edui-state-opened .edui-splitbutton-body,
+body .edui-default .edui-toolbar .edui-splitbutton .edui-state-checked .edui-splitbutton-body,
+body .edui-default .edui-toolbar .edui-splitbutton .edui-state-hover .edui-splitbutton-body,
+
+body .edui-default .edui-toolbar .edui-menubutton .edui-state-opened .edui-menubutton-body,
+body .edui-default .edui-toolbar .edui-menubutton .edui-state-checked .edui-menubutton-body,
+body .edui-default .edui-toolbar .edui-menubutton .edui-state-hover .edui-menubutton-body,
+
+body .edui-default .edui-toolbar .edui-button .edui-state-checked .edui-button-wrap,
+body .edui-default .edui-toolbar .edui-button .edui-state-hover .edui-button-wrap  { border: 1px solid #e7e7eb;background-color: #fff; }
+body .edui-default .edui-toolbar .edui-button.edui-for-more .edui-button-wrap { border: 1px solid #e7e7eb;background-color: #fff; padding: 0;}
+body .not-show-more .edui-default .edui-toolbar .edui-button.edui-for-more .edui-button-wrap { border: 1px solid transparent;background-color: transparent;}
+
+body .edui-default .edui-toolbar .edui-button .edui-icon,
+body .edui-default .edui-toolbar .edui-menubutton .edui-icon,
+body .edui-default .edui-toolbar .edui-splitbutton .edui-icon {background:url(/frontend/js/widgets/wx-editor/images/simple_edui.png) no-repeat;}
+
+body .edui-default .edui-button { font-size: 12px; position: relative; top: 3px;}
+body .edui-default .edui-menubutton,
+body .edui-default .edui-splitbutton { top: 1px;}
+
+body .edui-default .edui-editor-toolbarboxinner>div+div .edui-button { top: 2px;}
+body .edui-default .edui-for-more .edui-icon { background-position: 0 -72px!important; width: 26px!important; height: 26px!important;}
+body .edui-default .edui-for-blockquote .edui-icon { background-position: 0 -258px!important;}
+body .edui-default .edui-for-horizontal .edui-icon { background-position: 0 -588px!important;}
+body .edui-default .edui-for-removeformat .edui-icon { background-position: 0 -738px!important;}
+body .edui-default .edui-for-link .edui-icon { background-position: 0 -618px!important;}
+body .edui-default .edui-for-unlink .edui-icon { background-position: 0 -768px!important;}
+body .edui-default .edui-for-wx-pic .edui-icon { background-position: 0 -648px!important;}
+body .edui-default .edui-for-fullscreen .edui-icon { width: 26px!important; height: 26px!important;}
+body .edui-default .edui-for-fullscreen .edui-state-checked .edui-icon { background-position: 0 -36px!important;}
+body .edui-default .edui-for-bold .edui-icon { background-position: 0 -168px!important;}
+body .edui-default .edui-for-italic .edui-icon { background-position: 0 -198px!important;}
+body .edui-default .edui-for-underline .edui-icon { background-position: 0 -228px!important;}
+body .edui-default .edui-for-forecolor .edui-icon { background-position: 0 -288px!important;}
+body .edui-default .edui-for-backcolor .edui-icon { background-position: 0 -318px!important;}
+
+body .edui-default .edui-for-justifyleft .edui-icon { background-position: 0 -348px!important;}
+body .edui-default .edui-for-justifycenter .edui-icon { background-position: 0 -378px!important;}
+body .edui-default .edui-for-justifyright .edui-icon { background-position: 0 -408px!important;}
+body .edui-default .edui-for-rowspacingtop .edui-icon { background-position: 0 -558px!important;}
+body .edui-default .edui-for-rowspacingbottom .edui-icon { background-position: 0 -528px!important;}
+body .edui-default .edui-for-lineheight .edui-icon { background-position: 0 -498px!important;}
+body .edui-default .edui-for-insertorderedlist .edui-icon { background-position: 0 -438px!important;}
+body .edui-default .edui-for-insertunorderedlist .edui-icon { background-position: 0 -468px!important;}
+body .edui-default .edui-for-imagenone .edui-icon { background-position: 0 -798px!important;}
+body .edui-default .edui-for-imageleft .edui-icon { background-position: 0 -828px!important;}
+body .edui-default .edui-for-imageright .edui-icon { background-position: 0 -858px!important;}
+body .edui-default .edui-for-imagecenter .edui-icon { background-position: 0 -888px!important;}
+
+body .edui-default .edui-for-more,
+body .edui-default .edui-for-fullscreen { top: 0;}

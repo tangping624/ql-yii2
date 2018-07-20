@@ -1,0 +1,16 @@
+.editable label {margin: 0;width: 100%;}
+.editable label input {display: none;}
+.editable label span {display: inline; padding-left: 7px;}
+.edit .editable label input {display: inline;}
+.edit .editable label span {display: none;}
+.edit .editable { padding: 0 8px;}
+.edit .opt-modify,
+.edit .opt-del { display: none!important;}
+.edit .opt-ok,
+.edit .opt-cancel { display: inline!important;}
+
+.ui-sortable-helper { background: #f4f5f9; width: 100%; border-bottom: 1px solid #e3e3e3;}
+
+.glyphicon-th-list { text-decoration: none!important;}
+
+tbody tr { height: 50px;}

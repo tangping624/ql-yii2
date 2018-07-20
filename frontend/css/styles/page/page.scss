@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+@import '../module/_base.scss';
+
+/*-----组织构架-----*/
+.organization-framework{
+	border: 1px solid #e7e6eb;
+	top:0;
+	.public-tit{
+		position: relative;
+		.fonticon-plus{
+			color:#b0b0ae;
+			cursor: pointer;
+			position: absolute;
+			right: 10px;
+			top:50%;
+			height: 30px;
+			width: 30px;
+			margin:-15px 0 0 0;
+			&:before{
+				font-size: 24px;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin:-12px 0 0 -12px;
+			}
+		}
+	}
+	.grid{
+		position: absolute;
+		top:52px;
+		right: 0;
+		bottom: 0;
+		left:0;
+		overflow-y:auto;
+		.table{
+			border:0;
+			th{
+				background-color:transparent;
+			}
+			.row-bg{
+				background-color: #f4f5fa;;
+			}
+		}
+	}
+}
+
+/*-----应用中心-----*/
+.app-view-wrap{
+	overflow: hidden;
+	.app-view-inner{
+		margin-bottom: -1px;
+	}
+}
+.app-view{
+	border-bottom: 1px solid #e7e6eb;
+	padding: 0 30px;
+	.app-group{
+		font-size: 15px;
+		margin:0 0 0 0;
+		padding: 25px 0;
+	}
+	.app-list{
+		list-style: none;
+		margin: 0;
+		padding: 0 4px 30px 4px;
+	}
+	.app-item{
+		@extend %fl;
+		margin:20px 0 10px 0;
+		width: 181px;
+		text-align: center;
+	}
+	.app-link{
+		display: block;
+	}
+	.app-icon{
+		height: 90px;
+		width: 90px;
+	}
+	.app-name{
+		color:#333;
+		margin: 10px 0 0 0;
+	}
+}
+
+/*-----应用详情-----*/
+
+.bread-crumbs{
+	padding: 20px 0 0 30px;
+	.fonticon-goback{
+		color:#afafb1;
+		font-size: 20px;
+		margin-right: 5px;
+		text-decoration: none;
+	}
+	.bc-link{
+		color:#bebebe;
+	}
+}
+
+.app-detail{
+	top:50px;
+	.lib-panel{
+		.lp-item{
+			padding: 25px 0;
+		}
+	}
+	.app-single{
+		.app-icon-wrap{
+			background: #ccc;
+			@extend %fl;
+			height: 40px;
+			width: 40px;
+		}
+		.app-icon{
+			height: 40px;
+			width:40px;
+		}
+		.app-infor{
+			margin:0 0 0 55px;
+			min-height: 40px;
+		}
+		.app-name{
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 1;
+			margin-bottom: 3px;
+		}
+	}
+}
+
+
+/*-----权限管理-----*/
+//功能介绍
+.func-intro{
+	padding: 20px 30px 0 30px;
+	.fi-tit{
+		font-weight: normal;
+		padding: 0 0 10px 25px;
+		position: relative;
+		.icon-word{
+			position: absolute;
+			left:0;
+			top:2px;
+		}
+	}
+	.fi-item{
+		color:#808080;
+		padding-left:25px;
+	}
+}
+
+.authority-lib{
+	border: 1px solid #e7e6eb;
+	top:162px;
+	.lib-panel{
+		position: absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		overflow-y:auto;
+		.lp-item{
+			padding: 25px 30px;
+			&.item-edit-bg{
+				background-color:#f4f5fa;
+			}
+		}
+	}
+	.user-group-name{
+		.ug-name{
+			color:#808080;
+			margin: 0;
+		}
+	}
+	.app-role{
+		.ar-add-app{
+			border-style: solid;
+			border-color:#d9dadc;
+			border-width: 0 1px 1px 1px;
+			text-align: center;
+		}
+		.add-app-link{
+			color:#4b9eed;
+			display: inline-block;
+			@include vCenter(40px);
+			position: relative;
+			padding: 0 0 0 30px;
+		}
+		.fonticon-plus{
+			color:#4b9eed;
+			font-size: 24px;
+			position: absolute;
+			left:0;
+			top:50%;
+			margin-top:-12px;
+		}
+		.ar-btn-wrap{
+			padding: 10px 0 0 0;
+		}
+	}
+}

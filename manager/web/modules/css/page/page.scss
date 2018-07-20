@@ -1,0 +1,352 @@
+@charset "utf-8";
+
+@import '../../../frontend/css/publicStyles/module/_base.scss';
+
+/*-----组织构架-----*/
+.organization-framework{
+	border: 1px solid #e7e6eb;
+	top:0;
+	.public-tit{
+		position: relative;
+		.fonticon-plus{
+			color:#b0b0ae;
+			cursor: pointer;
+			position: absolute;
+			right: 10px;
+			top:50%;
+			height: 30px;
+			width: 30px;
+			margin:-15px 0 0 0;
+			&:before{
+				font-size: 24px;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin:-12px 0 0 -12px;
+			}
+		}
+	}
+	.grid{
+		position: absolute;
+		top:52px;
+		right: 0;
+		bottom: 0;
+		left:0;
+		//overflow-y:scroll;
+		overflow-y:auto;
+		.table{
+			border:0;
+			th{
+				background-color:transparent;
+			}
+			.row-bg{
+				background-color: #f4f5fa;;
+			}
+		}
+	}
+}
+
+
+.user-list{
+	//display: table-cell;
+	width: 672px;
+	border-left:1px solid #e7e6eb;
+	margin-left: 258px;
+}
+
+.js-tree-popup-radio{
+	height: 300px;
+	overflow-y:auto;
+}
+
+.popup-panel{
+	//display: none;
+	background-color:#fff;
+	border:1px solid #d9dadc;
+	position: absolute;
+	top:-1px;
+	right:-418px;
+	bottom:-1px;
+	width: 418px;
+	z-index: 1000;
+	.pp-head{
+		background-color: #f4f5fa;
+		border-bottom:1px solid #d9dadc;
+		font-size: 16px;
+		@include vCenter(52px);
+		text-align: center;
+		position: relative;
+		.fonticon-remove{
+			color:#b0b0ae;
+			cursor: pointer;
+			font-size: 24px;
+			position: absolute;
+			right: 10px;
+			top:50%;
+			height: 30px;
+			width: 30px;
+			margin:-15px 0 0 0;
+			&:before{
+				position: absolute;
+				height: 24px;
+				width: 24px;
+				top:50%;
+				left:50%;
+				margin:-12px 0 0 -12px;
+			}
+			&:hover{
+				color:#ffa300;
+			}
+		}
+		em{
+			font-style: normal;
+		}
+	}
+	.pp-content{
+		position: absolute;
+		top:53px;
+		bottom:50px;
+		left:0;
+		right: 0;
+		overflow-y:auto;
+	}
+	.user-infor{
+		padding: 30px 35px;
+		.ui-first{
+			padding-bottom: 30px;
+		}
+		.ui-name{
+			font-size: 24px;
+		}
+		.ui-item{
+			overflow:hidden;
+			span{
+				@include vCenter(30px);
+			}
+		}
+		.ui-label{
+			color:#888;
+			@extend %fl;
+			width: 80px;
+			text-align: right;
+		}
+		.ui-info{
+			display: block;
+			margin-left: 90px;
+		}
+	}
+	.pp-toolbar{
+		background-color: #f4f5fa;
+		border-top:1px solid #d9dadc;
+		position: absolute;
+		bottom:0;
+		left:0;
+		right: 0;
+		padding:8px 15px 8px 0;
+		text-align: right;
+		.btn{
+			margin-left:5px;
+		}
+	}
+
+	.batch-choose-user-wrap{
+		overflow:hidden;
+		padding: 0 30px 15px 30px;
+	}
+	.batch-choose-user{
+		list-style: none;
+		padding: 0;
+		margin-right: -15px;
+		.bcu-item{
+			border-radius: 3px;
+			background-color: #e8e7ec;
+			@include boxSizing(content-box);
+			@extend %fl;
+			margin:15px 15px 0 0;
+			max-width: 56px;
+			@include vCenter(24px);
+			@extend %textEps;
+			padding: 0 24px 0 5px;
+			position: relative;
+			.fonticon-remove{
+				cursor: pointer;
+				font-style: normal;
+				font-size: 16px;
+				position: absolute;
+				height: 24px;
+				width:24px;
+				right: 0;
+				top:0;
+				text-align: center;
+				&:before{
+					font-size: 16px;
+					@include vCenter(24px);
+				}
+				&:hover{
+					color:#ffa300;
+					&:before{
+						content: '\e604';
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*-----应用中心-----*/
+.app-view-wrap{
+	overflow: hidden;
+	.app-view-inner{
+		margin-bottom: -1px;
+	}
+}
+.app-view{
+	border-bottom: 1px solid #e7e6eb;
+	padding: 0 30px;
+	.app-group{
+		font-size: 15px;
+		margin:0 0 0 0;
+		padding: 25px 0;
+	}
+	.app-list{
+		list-style: none;
+		margin: 0;
+		padding: 0 4px 30px 4px;
+	}
+	.app-item{
+		@extend %fl;
+		margin:20px 0 10px 0;
+		width: 181px;
+		text-align: center;
+	}
+	.app-link{
+		display: block;
+	}
+	.app-icon{
+		height: 90px;
+		width: 90px;
+	}
+	.app-name{
+		color:#333;
+		margin: 10px 0 0 0;
+	}
+}
+
+/*-----应用详情-----*/
+.bread-crumbs{
+	padding: 20px 0 0 30px;
+	.fonticon-goback{
+		color:#afafb1;
+		font-size: 20px;
+		margin-right: 5px;
+		text-decoration: none;
+	}
+	.bc-link{
+		color:#bebebe;
+	}
+}
+
+.app-detail{
+	top:50px;
+	.lib-panel{
+		.lp-item{
+			padding: 25px 0;
+		}
+	}
+	.app-single{
+		.app-icon-wrap{
+			background: #ccc;
+			@extend %fl;
+			height: 40px;
+			width: 40px;
+		}
+		.app-icon{
+			height: 40px;
+			width:40px;
+		}
+		.app-infor{
+			margin:0 0 0 55px;
+			min-height: 40px;
+		}
+		.app-name{
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 1;
+			margin-bottom: 3px;
+		}
+	}
+}
+
+
+/*-----权限管理-----*/
+//功能介绍
+.func-intro{
+	padding: 20px 30px 0 30px;
+	.fi-tit{
+		font-weight: normal;
+		padding: 0 0 10px 25px;
+		position: relative;
+		.icon-word{
+			position: absolute;
+			left:0;
+			top:2px;
+		}
+	}
+	.fi-item{
+		color:#808080;
+		padding-left:25px;
+	}
+}
+
+.authority-lib{
+	border: 1px solid #e7e6eb;
+	top:62px;
+	.lib-panel{
+		position: absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		overflow-y:auto;
+		.lp-item{
+			padding: 25px 30px;
+			&.item-edit-bg{
+				background-color:#f4f5fa;
+			}
+		}
+	}
+	.user-group-name{
+		.ug-name{
+			color:#808080;
+			margin: 0;
+		}
+	}
+	.app-role{
+		.ar-add-app{
+			background-color:#fff;
+			border-style: solid;
+			border-color:#d9dadc;
+			border-width: 0 1px 1px 1px;
+			text-align: center;
+		}
+		.add-app-link{
+			color:#4b9eed;
+			display: inline-block;
+			@include vCenter(40px);
+			position: relative;
+			padding: 0 0 0 30px;
+		}
+		.fonticon-plus{
+			color:#4b9eed;
+			font-size: 24px;
+			position: absolute;
+			left:0;
+			top:50%;
+			margin-top:-12px;
+		}
+		.ar-btn-wrap{
+			padding: 10px 0 0 0;
+		}
+	}
+}

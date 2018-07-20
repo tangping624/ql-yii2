@@ -1,0 +1,62 @@
+@charset "UTF-8";
+h4 { font-size: 16px;}
+.wechat-link { float: right; font-size: 14px;}
+/*step*/
+.step-wrap { width: 100%; height: 36px; line-height: 34px; margin-bottom:30px;}
+.step-wrap p { width: 50%; display: block; float: left;}
+.step-wrap span { border: 1px solid #44b549; display: block; text-align: center;}
+.step-one .step-1,
+.step-two .step-2 { background: #44b549; color: #fff;}
+.step-wrap .step-1 span { border-right: none;}
+.step-wrap .step-2 span { border-left: none;}
+/*add page*/
+.form-align { width: 70%; margin: 0 auto; }
+/* guide page style start*/
+.guide-wrap { margin-top: 20px;}
+.guide-wrap .title { position: relative; text-indent: 16px; height: 26px; line-height: 26px; border-bottom: 2px solid #CCC; font-size: 15px;}
+.guide-wrap .title:before { content:""; display: block; width: 5px; height: 16px; position: absolute; top: 5px; background: #3db642;}
+.guide-wrap .btn-add { line-height: normal;}
+
+.guide-wrap .content-wrap { padding: 20px 0 10px; position: relative;}
+
+.copy-info .content-wrap>div { margin-bottom: 10px; height: 30px; line-height: 30px;}
+.copy-info label { width: 5em;}
+
+.guide-step { margin-top: 20px;  }
+.guide-step .content-wrap>div { padding-left: 60px; padding-bottom: 10px; position: relative;}
+.guide-step .content-wrap>div.bg-line:before { content:""; display: block; width: 0; left: 35px; z-index: 1; height: 100%; border-left: 1px solid #e3e3e3; position: absolute; }
+.guide-step .sub-title { height: 40px; line-height: 40px; position: relative; text-indent: 10px;}
+.guide-step .sub-title .step-icon { font-size: 12px; display: block; color: #FFF; width: 40px; height: 40px; font-style: normal; position: absolute; left: -45px; line-height: 40px; text-align: center; text-indent: 0; z-index: 2; background:  url(/modules/images/global/step_icon.png) no-repeat center center; }
+.guide-step .img-box { border: 1px solid #e3e3e3; border-radius: 3px; padding: 20px;}
+.guide-step .img-box:hover { box-shadow: 0 0 4px #ccc;}
+/* guide page style end*/
+
+/* wechat manage list start */
+.btn-add-area { float: right; /*font-size: 14px; position: absolute; top: -50px; right: 0;*/}
+.btn-add-area a { padding: 6px 20px;}
+.row { margin: 0 0 20px; padding: 0; position: relative;}
+.list-wrap dl { margin-bottom: 0;}
+.list-wrap .title { border-bottom: 1px solid #e7e7e7; position: relative; height: 40px; line-height: 40px; font-size: 16px; font-weight: normal; background: #f9f9f9; text-indent: 10px;}
+.list-wrap .mp-num { text-align: center; min-height: 164px;}
+.list-wrap .option-area { height: 40px; line-height: 40px; border-top: 1px solid #e7e7e7; border-bottom: 1px solid #e7e7e7;}
+.list-wrap .button-area { float: right; }
+.list-wrap .mp-num>div { height: 100%; position: relative;}
+.list-wrap .mp-name { padding: 30px 0;}
+.list-wrap .name-wrap .avatar { height: 80px; width: 80px; background: url(/modules/images/global/max_icon.png) no-repeat 0 0; border-radius: 5px; position: relative; left: 50%; margin-left: -40px;}
+.list-wrap .name-wrap .num-type { color: #ff9100;}
+.list-wrap .empty-app { height: 134px; line-height: 104px;}
+.list-wrap .app-wrap { padding-top: 30px; position: relative;}
+.list-wrap .app-wrap .split-line { position: absolute; height: 100%; padding-bottom: 60px;}
+.list-wrap .app-wrap .line-bg { border-left: 1px solid #e7e7e7; height: 100%;}
+.list-wrap .app-area { padding-bottom: 30px;}
+.list-wrap .app-area a { color: #000; text-decoration: none; outline: none;display: block;}
+.list-wrap .app-area .app-icon { display: block; position: relative; left: 50%; margin-left: -40px; width: 80px; height: 80px; background: #e4e4e4; border-radius: 10px;}
+.list-wrap .corp .title { text-indent: 26px;}
+.list-wrap .corp .title:before { content: ""; display: block; position: absolute; width: 8px; height: 8px; background: #3db642; top: 16px; left: 10px;}
+.list-wrap .button-area a { color: #000; text-indent: 30px; display: block; float: left; outline: none;}
+.list-wrap .button-area a+a { margin-left: 60px;}
+.list-wrap .cfg_wechat { background: url(/modules/images/global/cfg.png) no-repeat left center;}
+.list-wrap .del_wechat { background: url(/modules/images/global/del.png) no-repeat left center;}
+/* wechat manage list end */
+
+.add-organization .form-label,.add-organization .apps-list{margin-top:4px;}

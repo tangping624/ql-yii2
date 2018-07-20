@@ -1,0 +1,34 @@
+
+.opt-input,
+.opt-save,
+.opt-sort,
+.opt-hide,
+.opt-cancel { display: none;}
+
+.edit .v-text,
+.edit .opt-modify,
+.edit .opt-del { display: none;}
+.edit .opt-input,
+.edit .opt-save,
+.edit .opt-cancel { display: inline; }
+
+.sort .opt-modify,
+.sort .opt-del,
+.sort .opt-save,
+.sort .opt-dosort,
+.sort .opt-cancel { display: none; }
+
+.sort .opt-finish,
+.sort .opt-docancle { display: inline-block;}
+.sort .opt-hide,
+.sort .opt-sort { display: inline; }
+
+.v-text-title { padding-left: 7px;}
+.sort_list td span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.idx-num { width: 90px;}
+.type-info { width: 590px; }
+.opt-col { width: 150px; }
+
+.ui-sortable-helper { background: #f4f5f9; width: 100%; border-bottom: 1px solid #e3e3e3;}
+
+.glyphicon-th-list { text-decoration: none!important;}

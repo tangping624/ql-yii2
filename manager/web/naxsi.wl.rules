@@ -1,0 +1,7 @@
+BasicRule wl:11;
+BasicRule wl:0 "mz:$URL:/file/upfile|$BODY_VAR:source[]";
+BasicRule wl:0 "mz:$URL_X:/[^/]+/wechat/auto-reply/add-reply-info[^/]*|$BODY_VAR:content";
+BasicRule wl:0 "mz:$URL_X:/[^/]+/wechat/auto-reply/add-kf-info[^/]*|$BODY_VAR:keyword";
+BasicRule wl:0 "mz:$URL_X:/[^/]+/wechat/auto-reply/add-rule-info[^/]*|$BODY_VAR:reply_content";
+BasicRule wl:0 "mz:$URL_X:/[^/]+/wechat/material/save[^/]*|$BODY_VAR:data";
+BasicRule wl:0 "mz:$URL_X:/[^/]+/wechat/menu/set-menu-send-message[^/]*|$BODY_VAR:content";

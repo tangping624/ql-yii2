@@ -1,0 +1,568 @@
+/* --------------------------------------------------reset-------------------------------------------------- */
+body,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,select,textarea,button,th,td,menu,article,address{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6,input,textarea,select,button,label{font-size:100%;font-weight:100;vertical-align:middle;} 
+article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block;}
+ul,dl,ol{list-style:none;}
+img,fieldset,input[type="submit"]{border:none;}
+table{border-collapse:collapse;border-spacing:0;}       
+button{cursor:pointer;border:none;}
+textarea{word-wrap:break-word;resize:none;}
+img {display:inline-block;overflow:hidden;vertical-align: top;}
+em,address,i{font-style:normal;}
+sup,sub{vertical-align:baseline;}
+mark{background-color:transparent;}
+/* --------------------------------------------------常用功能-------------------------------------------------- */
+/*浮动*/
+.clearfix:after{content:".";display: block;clear: both;height: 0;visibility: hidden;}
+.clearfix{*zoom:1;}
+.fl{float: left;}
+.fr{float: right;}
+.pos-r{position: relative;}
+.pos-a{position: absolute;}
+
+.ta-c{text-align: center;}
+.td-u:hover{text-decoration: underline;}
+.ellipsis{display: block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.ellipsis2{white-space: nowrap;/* width: 200px; 修改*/overflow: hidden;text-overflow: ellipsis;display: inline-block;vertical-align: middle;}
+
+/*颜色*/
+.bg-green{background-color: #44b549 !important;}
+.bg-gray{background-color: #F4F5FA;}
+.bg-white{background-color:white !important;}
+.color-white{color:white;}
+.color-gray{color:#999 !important;}
+.color-red{color:red;}
+.color-red1{color:#e15f63;}
+.bo-gray{border:1px solid #E7E7EB;}
+
+/*隐藏 显示*/
+.hide{display: none;}
+.hidden{visibility: hidden;}
+.block{display:block;}
+/*字体大小*/
+.f-14{font-size:14px;}
+.f-18{font-size:18px;}
+
+/*全局*/
+html{min-width:1200px;} /*修复当窗口缩小时，头部未知的错误*/
+body{
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;
+    line-height: 1.6;color: #333;font-size: 14px;background-color: #E7E8EB;
+}
+input:-moz-placeholder{color:#999;font-family:"Microsoft YaHei","Helvetica";}
+::-webkit-input-placeholder{color:#999;font-family:"Microsoft YaHei","Helvetica";}
+a, a:link, a:visited, a:hover, a:active {text-decoration: none;}  
+
+/*去掉bootstrp时，打开这部分就可以了*/
+/*  *{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+button, input, optgroup, select, textarea{font:inherit;}
+a {color: #337ab7;}
+a:hover, a:focus {color: #23527c;}  */
+
+/*icon图标合并*/
+.icon-merge {background-image: url(/modules/images/icon-merge.png);}
+/* --------------------------------------------------页面框架-------------------------------------------------- */
+/* header */
+.header{position: relative;background-color: #fff;border-top: 4px solid #44b549;border-bottom: 1px solid #d9dadc;}
+.header .inner{width:1200px;margin:0 auto;}
+.header .logo{float: left;padding: 8px 0;font-size: 24px;}
+.header .logo a {
+    display: block;width: 207px;height: 44px;overflow: hidden;text-decoration: none;
+    background: url('/modules/images/logo.png') no-repeat left top;
+}
+.header .user-msg{float: right;padding-top:19px;}
+.header .user-msg a{color: black;}
+.header .user-msg a:hover{color:#459ae9;text-decoration: underline;}
+
+/*container*/
+.container{width: 1200px !important; margin-left: auto;margin-right: auto; padding: 36px 0 88px;}
+.container .content-wrap{border: 1px solid #d9dadc;background-color: #fff;}
+.container .left-menu, .container .right-content{display: table-cell;vertical-align: top;word-wrap: break-word;word-break: break-all;}
+.container .left-menu{width: 17.5%;max-width: 208px;border-right: 1px solid #e7e7eb;}
+.container .menu-wrap{margin-bottom: 150px;}
+.container .menu-list{padding-bottom: 6px;border-top: 1px solid #e7e7eb;padding-top: 6px;line-height: 34px;}
+.container .menu-first{border-top-width: 0;margin-top: 13px;}
+.container .menu-title{
+    position: relative;padding: 0 30px 0;width: auto;overflow: hidden;text-overflow: ellipsis;
+    font-weight:normal;white-space: nowrap;word-wrap: normal;line-height: 34px;color: #999;margin-bottom: 0;
+}
+.container .menu-title.clickable{padding:0;}
+.container .menu-title.clickable:hover{background-color: #f4f5f9;}
+.container .menu-title a {display: block;padding: 0 30px 0;color: #222;text-decoration: none;font-weight: normal;}
+.container .menu-title.clickable i {cursor: pointer;}
+.container .menu-icon{
+    background-position: -193px 0; 
+    width: 18px;height: 18px;vertical-align: middle;display: inline-block;margin-right: 10px;margin-top: -0.2em;
+}
+.container .menu-new {
+    margin-left: 6px;
+    background-position: -48px 0;
+    width: 18px;
+    height: 12px;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 100px;
+    overflow: hidden;
+}
+.container .menu-item{line-height: 34px;}
+.container .menu-item:hover{background-color: #F4F5F9;}
+.container .menu-item.on{background-color: #44b549;color: #fff;}
+.container .menu-item a{display: block;padding: 0 0 0 63px;width: auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;word-wrap: normal;color: #222;}
+.container .menu-item.on a{color: #fff;}
+.container .right-content{width: 2000px;height: 700px;padding-bottom: 30px;}/*使最小高度700*/
+.container .right-content h2 {font-size: 16px;padding: 0 30px;line-height: 70px;font-weight: 400;font-style: normal;} /* 标题 */
+/*二级菜单*/
+.page-nav {margin: 26px 30px 40px;}
+.page-nav.title-bottom {margin-top: 0;}
+.page-nav .icon-goback {margin-right: 5px;}
+.page-nav a{color: #999;}
+.page-nav a:hover{color:#459ae9;}
+.icon-goback {
+    background-position: -165px 0;
+    width: 26px;height: 26px;vertical-align: middle;display: inline-block;line-height: 100px;overflow: hidden;
+}
+
+/*footer*/
+.footer {padding: 24px 0;color: #f1f1f1;text-align: center;background-color: #b8b9b9;font-size:12px;}
+
+/* --------------------------------------------------图片上传-------------------------------------------------- */
+/* <div class="imgup-wrap" id="imgup_wrap">
+    <p class="title">上传图片<span class="color-gray"> (大图片建议尺寸：900px * 420px)</span></p>
+    <div class="img-wraps clearfix" id="img_wraps">
+        <div class="img-wrap">
+            <div class="img-box">
+                <p class="wait">等待中...</p>
+                <div class="per"><span class="pct"></span></div>
+            </div>
+            <div class="opeate">
+                <span class="opt-btn f-btn">
+                    <span class="icon-merge icon"></span>
+                </span>
+                <span class="opt-btn d-btn">
+                    <span class="icon-merge icon"></span>
+                </span>
+            </div>
+        </div>
+        <div class="img-wrap">
+            <div class="img-box">
+                <img src="/modules/images/modules/renting/default/login-bg.png" class="js-img">
+            </div>
+            <div class="opeate">
+                <span class="opt-btn f-btn">
+                    <span class="icon-merge icon"></span>
+                </span>
+                <span class="opt-btn d-btn">
+                    <span class="icon-merge icon"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <button class="btn-pr bg-white upload-btn" id="upload_btn">上传</button>
+    <p class="color-gray">已上传图片2/12，第一张图片默认为封面，每张最大支持10M，支持jpg/gif/png格式</p>
+</div> */
+.imgup-wrap{padding-bottom: 20px;}
+.imgup-wrap .title{margin-bottom:3px;}
+.img-wrap{width:174px; margin-right:5px;float:left;margin-bottom:8px;}
+.img-wrap p{text-align: center;margin-top:20px;font-size:12px;color:#B2B2B2;}
+.img-wrap .per{background-color:#ECECEC;width:100px;height:10px; margin: 10px auto;}
+.img-wrap .pct{float:left;width:10%;background-color: green;height:100%;}
+/*.first-box{margin-left:0;}*/
+.img-wrap .img-box{height:100px;border:1px solid #E7E7EB;background-color: white;}
+.img-wrap .img-box img{width:100%;height:100%;}
+.img-wrap .opeate{border:1px solid #E7E7EB;border-top:0;border-right:0;height:30px;}
+.img-wrap .opeate > span{float:left;height:100%;width:50%;border-right:1px solid #E7E7EB;cursor: pointer;}
+.img-wrap .opeate > span:hover{background-color: #ECECEC}
+.img-wrap .icon{display:inline-block;margin: 6px 0 0 35px;height: 17px;}
+.img-wrap .f-btn .icon{background-position: -211px 0; width: 16px;}
+.img-wrap .d-btn .icon{background-position: -315px 0; width: 15px;}
+.imgup-wrap .upload-btn{width:104px;}
+.imgup-wrap .upload-btn:hover{background-color: #ECECEC !important;}
+/* --------------------------------------------------tab切换-------------------------------------------------- */
+/*
+<ul class="tab-nav clearfix" id="tab_nav">
+    <li class="on">已关注</li>
+    <li>已注册</li>
+    <li>租赁中</li>
+</ul>
+*/
+.tab-nav{padding:0 14px;border-bottom: 1px solid #eee}
+.tab-nav li{
+    cursor:pointer;float: left;text-align: center;font-size: 16px;
+    padding:10px 0;margin-top: 4px;margin-right: 20px;width: 120px;
+}
+.tab-nav li.on{border-bottom: 3px solid #44B549;}
+.tab-table{padding:0;}
+.tab-table li{
+    cursor:pointer;float: left;text-align: center;font-size:16px;
+    padding:10px 0;margin:4px 0;width:100px;
+}
+.tab-table li span{padding:0;}
+.tab-table li.on{background-color:#687A8C;border:none;}
+/* --------------------------------------------------页面分页-------------------------------------------------- */
+/* <div class="pagin clearfix" id="pagin">
+    <div class="page-box">
+        <span class="page-nav-area">
+            <a href="javascript:void(0);" class="btn-pr page-first" style="display: none;"></a>
+            <a href="javascript:void(0);" class="btn-pr page-prev"><i class="arrow"></i></a>
+            
+                <span class="page-num">
+                    <label>2</label>
+                    <span class="num-gap">/</span>
+                    <label>3</label>
+                </span>
+            
+            <a href="javascript:void(0);" class="btn-pr page-next"><i class="arrow"></i></a>
+            <a href="javascript:void(0);" class="btn-pr page-last" style="display: none;"></a>            
+        </span>
+        
+        <span class="goto-area">
+            <input type="text" class="inp">
+            <a href="javascript:void(0);" class="btn-pr bg-white page-go">跳转</a>
+        </span>
+    </div>
+</div> */
+.pagin{padding:20px 0;border:1px solid #E7E6EB;border-top:0;}
+.page-box{margin-right:20px;float:right;}
+.page-nav-area {letter-spacing: 4px;}
+.page-nav-area, .goto-area{display: inline-block;vertical-align: middle;font-size: 14px;}
+.btn-pr.page-first, .btn-pr.page-last, .btn-pr.page-go{
+    background-color: #fff;
+    border-color: #e6e7ec;color: #222;height: 32px;
+    line-height: 32px;width: auto; padding:0 20px;
+}
+.btn-pr.page-prev, .btn-pr.page-next {
+    position: relative;font-size: 0;letter-spacing: -5px;
+    background-color: #fff;
+    border-color: #e6e7ec;color: #222;height: 30px; line-height: 30px;
+    width: auto; padding-left: 14px;padding-right: 14px;
+}
+.btn-pr.page-prev:hover, .btn-pr.page-next:hover{background-color:#E7E6EB;}
+.btn-pr.page-prev .arrow, .btn-pr.page-next .arrow {
+    position: absolute;top: 50%;left: 50%;margin-top: -6px;margin-left: -3px;
+}
+.page-prev .arrow {
+    display: inline-block;width: 0;height: 0;border-width: 6px;border-style: dashed;
+    border-color: transparent;border-left-width: 0;border-right-color: #919191;border-right-style: solid;
+}
+.page-next .arrow {
+    display: inline-block;width: 0;height: 0;
+    border-width: 6px;border-style: dashed;border-color: transparent;
+    border-right-width: 0;border-left-color: #919191;border-left-style: solid;
+}
+.page-num {display: inline-block;vertical-align: middle;font-size: 14px;letter-spacing: normal;}
+.goto-area {margin-left: 8px;}
+.goto-area input[type="text"] {
+    vertical-align: middle;width: 75px;height: 32px;line-height: 22px;
+    padding: 4px 0;border: 1px solid #e7e7eb;box-shadow: none;-moz-box-shadow: none;
+    -webkit-box-shadow: none;border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;
+    text-align: center;font-size: 14px;margin-right: 4px;
+}
+/* --------------------------------------------------margin和padding-------------------------------------------------- */
+.pn{padding:0;}
+.mn{margin:0;}
+.mr24{margin-right:24px;}
+.mr28{margin-right:28px;}
+.mr14{margin-right:14px;}
+.mb18{margin-bottom:18px;}
+.mb14{margin-bottom:14px !important;}
+.mb5{margin-bottom: 5px}
+.mr90{margin-right:90px;}
+.mb10{margin-bottom:10px !important;}
+.mt10{margin-top:10px !important;}
+.mt14{margin-top:14px;}
+
+.plr30{padding-left:30px;padding-right:30px;}
+.pl50{padding-left:50px;}
+.pb24{padding-bottom:24px;}
+.pyh{padding:24px 80px}
+/* --------------------------------------------------重置bootstrap-------------------------------------------------- */
+.btn:hover, .btn:focus, .btn.focus{color:white;}
+a:focus{outline: 0;outline-offset: 0;}
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus{outline: 0;outline-offset:0;}
+/* --------------------------------------------------页面共有-------------------------------------------------- */
+/*
+新增按钮
+<div class="add-btn clearfix plr30">
+    <a class="btn-pr bg-green color-white" href="/index.php?r=renting/project/add&o=<?= $this->context->org?>">
+        <span class="icon-merge add"></span><span>新增楼盘</span>
+    </a>
+</div>
+*/
+.add-btn{padding-bottom: 18px;padding-top:4px;}
+.add-btn a{float:right;}
+.add-btn a:hover{color:white;}
+.add-btn .add{vertical-align: middle;margin-right: 5px;background-position: -229px 0; width: 12px; height: 12px;display: inline-block;}
+
+/*
+table表格
+<table id="table" class="table-pr">
+    <tr class="bg-gray">
+        <th class="one">楼盘名称</th>
+        <th class="two">租赁信息</th>
+        <th class="three">标签信息</th>
+        <th class="four">操作</th>
+    </tr>
+    <tr><td>...</td></tr>
+    ...
+</table>
+*/
+.table-pr{width:100%;border:1px solid #E7E6EB;border-collapse:separate;border-bottom:0;}
+.table-pr th,.table-pr td{border-bottom:1px solid #E7E6EB;}
+.table-pr th{padding:10px 22px;font-weight: normal;}
+.table-pr th.one{width:218px;padding-left:8px;}
+.table-pr th.two{width:290px;}
+.table-pr th.three{width:269px;}
+.table-pr th.four{width:152px;}
+.table-pr td{vertical-align: top;}
+.table-pr p, .table-pr a{display:block;padding-bottom:10px;}
+.table-pr a:hover{text-decoration: underline;}
+.table-pr .delete{width: 30px;}
+.table-pr .edit-box{border: 1px dashed transparent;border-bottom: 1px solid #E7E6EB;}
+.icon-tedit{background-position: -256px 0; width: 25px; height: 20px;display: inline-block;}
+.table-pr .edit-box .icon-tedit, .table-pr .noedit-box .icon-tedit{display: none;}
+.table-pr .edit-box:hover, .table-pr .tedit-checked{border: 1px dashed #3EB642;position: relative;}
+.table-pr .edit-box:hover .icon-tedit, .table-pr .tedit-checked .icon-tedit{display:inline-block;position: absolute;right:0;top:0;cursor: pointer;}
+
+/*
+点击编辑、删除的提示弹层
+<div class="tips-wrap">
+    <p>租赁管理员</p>
+    <input type="text" class="inp inp-pr mb10">
+    <p>联系电话</p>
+    <input type="text" class="inp inp-pr">
+    <p class="color-red edit-error mt5 hide">不能为空</p>
+    <div class="mt10">
+        <button class="btn-pr bg-green color-white">确定</button>
+        <button class="btn-pr bg-white fr">取消</button>
+    </div>
+</div>
+
+<div class="tips-wrap">
+    <div class="delete-info">确定删除？</div>
+    <button class="btn-pr bg-green color-white">确定</button>
+    <button class="btn-pr bg-white fr">取消</button>
+</div>
+
+JS使用：
+$.pt({
+    target: this,
+    width: 286,
+    position: 'b', 
+    align: 'c',   
+    autoClose: false,
+    leaveClose: false,
+    content: '内容'
+});
+*/
+.tips-wrap{margin:20px;width:226px;}
+.tips-wrap button{width:105px;}
+.delete-info{margin-bottom:14px;}
+
+/* 
+table表格：正在加载、无数据、错误信息
+<div class="table-info" id="table_info">
+    <span id="loading">数据加载中 ...</span>
+    <span class="hide" id="empty_msg">暂无数据</span>
+    <span class="hide" id="error_msg">网络错误</span>
+</div>
+ */
+.table-info{height:82px;line-height: 82px;border:1px solid #E7E6EB;text-align: center;border-top:0;}
+
+/*鼠标放上去hover变色，一般用于按钮*/
+.hover:hover{background-color: #E7E6EB;cursor: pointer;}
+
+/*
+鼠标放上去、离开的黑色tip提示信息，使用：
+$.pt({
+    target: this,
+    width: 'auto',
+    position: 't', 
+    align: 'c',   
+    autoClose: false,
+    leaveClose: false,
+    content: '内容',
+    skin: 'pt-black'
+});
+*/
+.pt{box-shadow:0 0 !important;} /*要求去掉阴影，无法理解*/
+.pt-black{box-shadow:0 !important;font-size:12px;border:0 !important;}
+.pt-black .cont{background-color: #555556 !important;padding: 2px 10px !important;color:white !important;}
+.pt-black .out, .pt-black .in{border-color:#555556 transparent transparent !important;}
+
+/*兼容IE8 placeholder属性*/
+.placeholder{color:#999;}
+
+/*input输入样式*/
+.inp{outline:none;background:transparent;vertical-align:top;-webkit-appearance:none;border:none;}
+.inp-pr{width:226px;border:1px solid #E7E7EB;height:34px;margin-bottom:5px;display: block;padding:5px;}
+.inp-set{width:350px;line-height:25px;}
+
+/*按钮样式*/
+.btn-pr{display: inline-block;text-align: center;white-space: nowrap;vertical-align: middle;cursor: pointer;border-radius: 4px;outline: none;border:1px solid #E7E6EB;}
+.btn-pr:hover{background-color:#E7E6EB;}
+
+/* 
+表单输入
+<div class="text-wrap">
+    <p>租赁管理员</p>
+    <input type="text" class="inp inp-pr">
+</div> 
+*/
+.text-wrap{margin-bottom:20px;}
+.text-wrap p{margin-left:1px;margin-bottom:3px;}
+.text-wrap i{line-height: 30px;margin:0px 10px 0 6px}
+.text-wrap input{width:100%;background-color: white;height:30px;}
+
+/* 
+新增、编辑页面结构
+<div class="page-con clearfix">
+    <div class="fl left-box">
+        <p class="color-gray" id="title"><?= $isEdit ? $model->project->name : '标题' ?></p>
+        <div class="cover-box" id="cover_box">
+            <?php if( $isEdit) {?>
+                <img width="100%" height="100%" src="<?= $model->project->logo ?>" />
+            <?php }else { ?>
+                <span>封面图片</span>
+            <?php } ?>
+        </div>
+    </div>
+
+    <div class="fr right-form" id="form">
+        <span class="icon-merge trigon"></span>
+        表单内容...
+    </div
+</div> 
+*/
+.left-box{width:320px;padding:20px 14px 0;border:1px solid #ECECEC;margin-left:30px;}
+.cover-box{background-color: #ECECEC;text-align: center;margin:14px 0;height:152px;line-height: 152px;color:#CACACA;cursor: pointer}
+.right-form{border:1px solid #E7E8EC;background-color: #F4F5F9;width:580px;margin-right:30px;padding: 30px 20px 0;margin-bottom:40px;position: relative}
+.trigon{
+    background-position: -85px 0;
+    /*background:url(/modules/images/modules/renting/default/s.png) no-repeat center;*/
+    /* border-style: solid;border-width: 13px;border-color: white #F4F5F9 white white;left: -26px;top: 50px;*/
+    position: absolute;left: -12px;top: 35px;width:12px;height:22px;
+}
+
+/* 
+文本编辑器样式重置
+<div style="width:100%;height:200px;" id="uedesc" class="ueedit-box"></div>
+ */
+.ueedit-box{background-color: white;}
+.edui-default .edui-editor-toolbarboxouter{
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f5f9', endColorstr='#f4f5f9', GradientType=0) !important;
+    background-image: linear-gradient(to bottom, #f4f5f9, #f4f5f9) !important;
+    box-shadow: 0 0 !important;
+}
+
+/* 
+多选
+<div class="text-wrap">
+    <p>配套设施</p>
+    <div class="ss-check" id="ss_check">
+        <em class="all-check">全选<cite></cite></em>
+        <span>床<cite></cite></span><span>衣柜<cite></cite></span>
+        <span>沙发<cite></cite></span> <span>电视<cite></cite></span>
+        <span>冰箱<cite></cite></span><span>洗衣机<cite></cite></span>
+        <span>宽带<cite></cite></span><span>热水器<cite></cite></span>
+        <span>书桌<cite></cite></span><span>餐桌椅<cite></cite></span>   
+    </div>
+    <input type="hidden" value="..." id="...">
+</div>
+*/
+.ss-check{font-size:0;}
+.ss-check span,.ss-check em{
+    font-size:14px;display:inline-block;height:30px;padding:4px 14px;position:relative;
+    border:1px solid #E7E7EB;background-color: white;margin-right:8px;cursor: pointer;margin-bottom:7px;
+}
+.ss-check span:hover,.ss-check em:hover,.ss-check .checked{border-color:#3EB642;}
+.ss-check .checked cite{
+    background: url(/modules/images/icon-merge.png) no-repeat -243px 0;
+    width: 11px; height: 11px;display: inline-block;position: absolute;bottom: 0;right: 0;
+}
+
+/* 
+'+'号按钮
+<div class="ps-add-wrap">
+    <div class="ps-add">
+        <span class="line-bg"><span class="line h-line"></span></span>
+        <span class="line-bg"><span class="line v-line"></span></span>
+    </div>
+    <div class="tips">添加服务</div>
+</div>
+ */
+.ps-add-wrap{border:1px dashed #D1D2D7;height:80px;width:300px;cursor: pointer;}
+.ps-add-wrap .tips{display: none;text-align: center;line-height: 80px;color:#999;}
+.ps-add-wrap:hover .ps-add{display: none;}
+.ps-add-wrap:hover .tips{display: block}
+.ps-add{/* margin-right: 5%; */position: relative;}
+.ps-add .line-bg{position: absolute;width:100%;height:80px;line-height:80px;text-align: center;}
+.ps-add .line{background-color: #D9D9D9;display:inline-block;vertical-align: middle;}
+.ps-add .h-line{width:40px;height:2px;}
+.ps-add .v-line{height:40px;width:2px;}
+.yh-add-wrap{border:1px dashed #D1D2D7;line-height:30px;width:80px;text-align:center;cursor: pointer;}
+/*icon图标*/
+.icon-delete{background-position: -299px 0;width:14px;height:15px;cursor: pointer;margin-top: 5px;}
+.icon-edit{
+    background-position: -283px 0; width: 14px; height: 15px;
+    display: inline-block;margin-bottom: -2px;margin-left: 3px;cursor: pointer
+}
+
+
+/*左右滑动开关*/
+.iosCheck {
+    margin:0;padding:0;
+}
+.iosCheck input {
+  display: none;
+}
+.iosCheck i {
+    position:relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 30px;
+    -webkit-transition: all ease 0.2s;
+    transition: all ease 0.2s;
+    border-radius: 25px;
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.iosCheck i:before {
+    display: block;
+    content: '';
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.iosCheck i:after {
+    content: 'OFF';
+    color: #999;
+    position:absolute;
+    top:4px;
+    font-size:12px;
+    font-style:normal;
+    left: 29px;
+}
+.iosCheck :checked + i:after {
+    content: 'ON';
+    color: #fff;
+    position:absolute;
+    top:4px;
+    font-size:12px;
+    font-style:normal;
+    left: 6px;
+}
+.iosCheck :checked + i {
+    padding-right: 0;
+    padding-left: 30px;
+    background: #00e970;
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5), inset 0 0 40px #00e079;
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5), inset 0 0 40px #00e079;
+}
+.iosCheck.blue :checked + i {
+    background: #6cbff0;
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5), inset 0 0 40px #0093ea;
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5), inset 0 0 40px #0093ea;
+}
+.manage-content .setform{padding-left:70px;}
+.pl50 span{display:inline-block;width:100px;text-align:left}

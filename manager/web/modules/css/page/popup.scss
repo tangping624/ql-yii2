@@ -1,0 +1,180 @@
+@charset "utf-8";
+@import '../../../frontend/css/publicStyles/module/_base.scss';
+
+
+body{
+	background:none;
+}
+
+
+/*-----添加从属部门-----*/
+.popup-select-department{
+	background: #fff;
+	.multi-select-control{
+		position: relative;
+		.msc-list{
+			border: 1px solid #dadadc;
+			padding: 3px 0 0 5px;
+			min-height: 32px;
+			max-height: 86px;
+			overflow-y:auto;
+		}
+	}
+	.js-tree{
+		border: 1px solid #dadadc;
+		height: 278px;
+		overflow-y:auto;
+	}
+}
+
+/*-----添加可见范围-----*/
+.popup-select-company{
+	background: #fff;
+	.multi-select-control{
+		position: relative;
+		.msc-list{
+			border: 1px solid #dadadc;
+			padding: 3px 0 0 5px;
+			min-height: 32px;
+			max-height: 86px;
+			overflow-y:auto;
+		}
+	}
+	.public-select-panel{
+		margin-top:20px;
+		.ps-list{
+			height: 205px;
+			overflow-y:auto;
+		}
+	}
+}
+
+/*-----新增用户-----*/
+.form-area{
+	.form-tag-wrap{
+		.multi-select-control{
+			position: relative;
+			z-index: 10;
+			.js-tree{
+				background: #fff;
+				position: absolute;
+				height: 100px;
+				width: 100%;
+				top:32px;
+				overflow-y:auto;
+			}
+		}
+	}
+}
+
+/*-----选择成员-----*/
+.select-member-popup{
+	height: 100%;
+	position: relative;
+	.popup-content{
+		padding: 0;
+		position: absolute;
+		left:0;
+		top:0;
+		bottom:62px;
+		width: 100%;
+	}
+	.multi-select-control{
+		margin:30px 30px 0 30px;
+		position: relative;
+	}
+	.public-panel{
+		border:1px solid #e7e6eb;
+		top:62px;
+	}
+	.grid{
+		border:0;
+		position: absolute;
+		top:52px;
+		right: 0;
+		bottom: 0;
+		left:0;
+		overflow-y:auto;
+		.table{
+			border:0;
+			th{
+				background-color:transparent;
+			}
+			.row-bg{
+				background-color: #f4f5fa;;
+			}
+		}
+	}
+	.form-bottom{
+		position: absolute;
+		left:0;
+		bottom:0;
+		width: 100%;
+	}
+}
+
+/*-----添加应用-----*/
+.select-app-popup{
+	.popup-content{
+		height: 358px;
+		overflow-y:auto;
+	}
+	.sap-list{
+		list-style: none;
+		margin: 0;
+		padding: 0 4px;
+	}
+	.sap-item{
+		@extend %fl;
+		margin:20px 0 10px 0;
+		width: 160px;
+		text-align: center;
+		.sap-icon{
+			border:3px solid transparent;
+			border-radius: 4px;
+			@include boxSizing(content-box);
+		}
+		&.selected{
+			position: relative;
+			.sap-icon{
+				border-color:#3eb642;
+			}
+			&:before,
+			&:after{
+				cursor: pointer;
+				position: absolute;
+				left:50%;
+			}
+			&:before{
+				background:#000;
+				content: '';
+				@include opacity(40);
+				top:3px;
+				margin-left:-45px;
+				height: 90px;
+				width: 90px;
+				z-index: 5;
+			}
+			&:after{
+				@extend %font-icon;
+				content:'\e614';
+				color:#fff;
+				font-size: 30px;
+				margin-left:-15px;
+				top:33px;
+				z-index: 10;
+			}
+		}
+	}
+	.sap-link{
+		display: block;
+	}
+	.sap-icon{
+		height: 90px;
+		width: 90px;
+	}
+	.sap-name{
+		color:#333;
+		margin: 10px 0 0 0;
+	}
+}

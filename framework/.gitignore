@@ -1,0 +1,48 @@
+*.phpproj
+*.sln
+*.suo
+*.user
+*.swp
+/nbproject/private/
+*.phpproj
+*.sln
+/nbproject/
+
+.DS_Store
+
+# phpstorm project files
+.idea
+.idea/
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+.idea
+/.idea
+# windows thumbnail cache
+Thumbs.db
+
+# composer vendor dir
+tags
+tags/
+
+# composer itself is not needed
+composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+
+*.suo
+renting-manage.phpproj.user
+
+#runtime
+runtime/
+vendor/
+
+
+/3rd/wxpay/logs/
+/3rd/wxpay/unit/phpqrcode/cache/

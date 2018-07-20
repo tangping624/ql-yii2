@@ -1,0 +1,111 @@
+@charset "utf-8";
+@import '_setting.scss';
+@import '_mixin.scss';
+
+
+%font-icon{
+  font-family: 'icomoon';
+  line-height: 1;
+}
+
+%fl{
+  float: left;
+}
+%fr{
+  float: right;
+}
+
+%fontFamily{
+  font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Helvetica,Arial,sans-serif;
+}
+
+%centerBlock{
+  margin-left: auto;
+  margin-right: auto;
+}
+%tALeft {
+  text-align: left;
+}
+%tACenter {
+  text-align: center;
+}
+%tARight {
+  text-align: right;
+}
+%inlineBlock{
+	display: inline-block;
+	@if $ie7{
+		*display:inline;
+		*zoom:1;
+	}
+}
+%inlineBlockAlignment{
+	@extend %inlineBlock;
+	vertical-align: middle;
+	@if $ie7{
+		*vertical-align:baseline;
+	}
+}
+
+//clearfix
+%clearfix{
+  @if $ie7{
+  	zoom:1;
+  }
+  &:before,
+  &:after{
+    content:"";
+    display:table;
+  }
+  &:after{
+    clear:both;
+    overflow:hidden;
+  }
+}
+//hide text
+%textHide{
+  display: inline-block;
+  font: 0/0 a;
+  overflow: hidden;
+}
+%texthidden {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    @if $ie7 {
+        *text-indent: -150%;
+    }
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
+}
+//...
+%textEps{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//transform-style
+%transformStyle{
+  @include prefixer(transform-style,preserve-3d,webkit moz ms o spec);
+}
+
+//clear inline-block padding
+@mixin clearInlineBlockPadding{
+  font-size: 0;
+  letter-spacing: -0.41rem;
+  @if($ie7){
+    *word-spacing: -3px;
+  }
+}
+@mixin inlineBlockRecover($size){
+  font-size: $size;
+  letter-spacing: normal;
+  @if($ie7){
+    *word-spacing: 0;
+  }
+}

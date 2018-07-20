@@ -1,0 +1,29 @@
+
+
+.attention-form tr { height: 42px;}
+
+.attention-form tr .v-text { padding: 6px 7px;}
+
+.attention-form tr .opt-input,
+.attention-form tr .opt-save,
+.attention-form tr .opt-cancel { display: none;}
+.attention-form tr .opt-del { display: none;}
+
+.attention-form tr.edit .v-text,
+.attention-form tr.edit .opt-modify,
+.attention-form tr.edit .opt-del { display: none;}
+.attention-form tr.edit .opt-input,
+.attention-form tr.edit .opt-save,
+.attention-form tr.edit .opt-cancel { display: inline;}
+
+.attention-form tr.edit .opt-input { height: 30px; }
+
+.corp_id { width: auto; min-width: 200px;}
+
+.v-title,
+.v-text,
+.opt-input-value { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block;}
+
+.v-title { width: 12em; }
+.v-text,
+.opt-input-value { width: 30em; }

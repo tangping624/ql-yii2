@@ -1,0 +1,9 @@
+@charset "utf-8";
+.impowerBox{width:220px;text-align: left;padding-left:16px;margin-top: -13px;}
+.impowerBox .qrcode{width:156px;}
+.impowerBox .title{color:#000;font-size: 18px;text-align: left;padding-left:36px;}
+.impowerBox .info{width:220px;color:#000;}
+.impowerBox .status.status_browser{text-align: left;}
+.impowerBox .status.status_browser p{text-align: center;width:159px;}
+.impowerBox .status{padding:7px 0;}
+.impowerBox .status_txt,.impowerBox .status_txt p{font-size: 12px;}

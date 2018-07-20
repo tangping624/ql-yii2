@@ -1,0 +1,312 @@
+@charset "utf-8";
+
+//auto add prefixer
+@mixin prefixer ($property, $v, $prefixes:webkit moz ms o spec) {
+  $flag : false;
+  @each $j in $v{
+    @each $a in $j{
+      @if $a == 'transform'{
+        $flag :true;
+      }
+    }
+  }
+  @each $i in $prefixes {
+    @if $i == webkit and $webkit == true {
+      @if $flag{
+        -webkit-#{$property}: -webkit-#{$v};
+      }@else{
+        -webkit-#{$property}: $v;
+      }
+    }
+    @else if $i == moz and $moz == true {
+      @if $flag{
+        -moz-#{$property}: -moz-#{$v};
+      }@else{
+        -moz-#{$property}: $v;
+      }
+    }
+    @else if $i == ms and $ms == true {
+      @if $flag{
+        -ms-#{$property}: -ms-#{$v};
+      }@else{
+        -ms-#{$property}: $v;
+      }
+    }
+    @else if $i == o and $o == true {
+      @if $flag{
+        -o-#{$property}: -o-#{$v};
+      }@else{
+        -o-#{$property}: $v;
+      }
+    }
+    @else if $i == spec and $spec == true {
+      #{$property}: $v;
+    }
+    @else {
+      @warn "Unrecognized prefix: #{$prefix}";
+    }
+  }
+}
+
+//border-radius
+@mixin borderRadius($v){
+	@include prefixer(border-radius,$v,webkit moz spec);
+}
+
+//box-shadow(firefox、safari需要加前缀)
+@mixin boxShadow($v...){
+  @include prefixer(box-shadow,$v,webkit moz spec);
+}
+
+//transform
+@mixin transform($v...){
+	@include prefixer(transform,$v,webkit moz o spec);
+}
+
+//transform-origin
+@mixin transformOrigin($v...){
+  @include prefixer(transform-origin,$v,webkit moz o spec);
+}
+
+//transition
+@mixin transition($v...){
+	@include prefixer(transition,$v,webkit moz ms o spec);
+}
+
+//animation
+@mixin animation($v...){
+  @include prefixer(animation,$v,webkit moz ms o spec);
+}
+
+//animation-delay
+@mixin animationDelay($v){
+  @include prefixer(animation-delay,$v,webkit moz ms o spec);
+}
+
+//perspective
+@mixin perspective($v){
+	@include prefixer(perspective,$v,webkit moz ms o spec);
+}
+
+//box-sizing:border-box/padding-box/content-box
+@mixin boxSizing($v){
+  @include prefixer(transform-style,$v,webkit moz spec);
+}
+
+//透明度
+@mixin opacity($v:50) {
+  opacity: $v / 100;
+  @if $ie8{
+    filter: alpha(opacity = $v);
+  }
+}
+
+//禁用样式
+@mixin disabled($bgColor: #e6e6e6,$textColor:#ababab){
+    background-color: $bgColor !important;
+    color: $textColor !important;
+    cursor: not-allowed !important;
+}
+
+//最小高度
+@mixin minHeight($v){
+    min-height: $v;
+    height: auto !important;
+    @if $ie6 {
+        _height: $v;
+    }
+}
+
+
+@mixin vCenter($v){
+  height: $v;
+  line-height: $v;
+}
+
+%content{
+  content:'';
+  height: 0;
+  width: 0;
+  position:absolute; //其父元素需要定义为position:realtive
+}
+
+//screen
+@mixin screen($minW, $maxW){
+  @media screen and ( min-width: $minW ) and ( max-width: $maxW ){
+    @content;
+  }
+}
+
+//keyframes
+@mixin keyframes ($name) {
+  $prefixes:webkit spec;
+  @each $i in $prefixes {
+    @if $i == webkit and $webkit == true {
+        @-webkit-keyframes #{$name}{
+          @content;
+      }
+    }
+    @else if $i == moz and $moz == true {
+        @-moz-keyframes #{$name}{
+          @content;
+        }
+    }
+    @else if $i == ms and $ms == true {
+        @-ms-keyframes #{$name}{
+          @content;
+        }
+    }
+    @else if $i == o and $o == true {
+        @-o-keyframes #{$name}{
+          @content;
+        }
+    }
+    @else if $i == spec and $spec == true {
+        @keyframes #{$name}{
+          @content;
+        }
+    }
+    @else {
+      @warn "Unrecognized prefix: #{$prefix}";
+    }
+  }
+}
+
+@mixin fontFace($fontFamily, $filePath, $weight: normal, $style: normal ) {
+  @font-face {
+    font-family: $fontFamily;
+    font-weight: $weight;
+    font-style: $style;
+    src: url('#{$filePath}.eot'); // 1
+    src: url('#{$filePath}.eot?#iefix')               format('eot'), // 2
+         url('#{$filePath}.svg##{$font-family}')      format('svg'), // 3
+         url('#{$filePath}.woff')                     format('woff'), // 4
+         url('#{$filePath}.ttf')                      format('truetype'); //5
+  }
+}
+
+//1. $size定义三角大小 默认参数值30px
+//2. $color定义三角颜色 默认参数值#000
+//3. $bgColor定义内嵌三角颜色 默认参数值#111
+//4. $direction定义三角方向 默认参数值up
+//5. $inner定义三角是否内嵌 默认参数值false，表示不内嵌
+//6. $transparent定义透明三角 默认参数值false，表示三角不透明
+
+@mixin triangle ($size:30px,$color:#000,$bgColor:#111,$direction:up,$inner:false,$transparent:false){
+ //使用border制作三角，有可能使用伪类生成，需要调用一个伪类所需样式
+  @extend %content;
+
+ //判断三角形状
+ //三角形为向上up、向右right、向下down和向左left四种
+
+ @if ($direction == up) or ($direction == right) or ($direction == down) or ($direction == left) {
+  //设置边框
+  border: ($size / 2) solid transparent;
+
+   //三角朝上
+  @if $direction == up {
+      //三角内嵌 $inner=true
+      @if $inner {
+        border-color: $bgColor transparent transparent transparent;
+        border-bottom-width: 0;
+        top: 0;
+      } @else { //三角为内嵌$inner=false
+        border-color:  transparent transparent $color transparent;
+        border-top-width: 0;
+        //bottom: 100%;
+      }
+
+      //三角为透明 $transparent = true
+      @if $transparent {
+        border-color: transparent $color $color $color;
+        border-top-width: $size / 2;
+        border-bottom-width: 0;
+      }
+  }
+
+    //三角朝右
+  @else if $direction == right {
+    @if $inner {
+      border-color:  transparent $bgColor transparent transparent;
+      border-left-width: 0;
+      right: 0;
+    } @else {
+      border-color:  transparent transparent transparent $color;
+      border-right-width: 0;
+      //left: 100%;
+    }
+    @if $transparent {
+      border-color:  $color transparent $color $color;
+      border-right-width: $size / 2;
+      border-left-width: 0;
+    }
+  }
+
+  //三角朝下
+  @else if $direction == down {
+    @if $inner {
+      border-color:  transparent  transparent $bgColor transparent;
+      border-top-width: 0;
+      bottom: 0;
+    } @else {
+      border-color: $color transparent transparent transparent;
+      border-bottom-width: 0;
+      //top: 100%;
+    }
+    @if $transparent {
+      border-color:  $color $color transparent $color;
+      border-bottom-width: $size / 2;
+      border-top-width: 0;
+    }
+  }
+
+  //三角朝右
+  @else if $direction == left {
+    @if $inner {
+      border-color:  transparent transparent transparent $bgColor;
+      border-right-width: 0;
+      left: 0;
+    } @else {
+      border-color:  transparent $color transparent transparent;
+      border-left-width: 0;
+      //right: 100%;
+    }
+    @if $transparent {
+      border-color:  $color $color $color transparent;
+      border-left-width: $size / 2;
+      border-right-width: 0;
+       }
+     }
+   }
+
+  //当三角为左上、右上直角三角形时
+  @else if ($direction == up-right) or ($direction == up-left) {
+    border-top: $size solid $color;//顶边边框样式
+    //top: 100%;
+    //当三角为右上直角三角形时，设置左边边框为透明
+    @if $direction == up-right {
+      border-left:  $size solid transparent;
+      left: 0;
+
+      //当三角为左上直角三角形时，设置右边边框为透明
+      } @else if $direction == up-left {
+        border-right: $size solid transparent;
+        right:0;
+      }
+    }
+
+  //当三角为右下、左下直角三角形时
+  @else if ($direction == down-right) or ($direction == down-left) {
+    border-bottom: $size solid $color;//底边边框样式
+    //bottom: 100%;
+    //当三角为右下直角三角形时，设置左边边框为透明
+    @if $direction == down-right {
+      border-left:  $size solid transparent;
+      left: 0;
+      //当三你为左下直角三角形时，设置右边边框为透明
+    } @else if $direction == down-left {
+      border-right: $size solid transparent;
+      right: 0;
+    }
+  }
+}

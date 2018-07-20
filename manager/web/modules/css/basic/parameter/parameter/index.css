@@ -1,0 +1,21 @@
+
+
+.parameter-form tr { height: 42px;}
+
+.parameter-form tr .v-text { padding: 6px 7px;}
+
+.parameter-form tr .opt-input,
+.parameter-form tr .opt-save,
+.parameter-form tr .opt-cancel { display: none;}
+
+.parameter-form tr.edit .v-text,
+.parameter-form tr.edit .opt-modify { display: none;}
+.parameter-form tr.edit .opt-input,
+.parameter-form tr.edit .opt-save,
+.parameter-form tr.edit .opt-cancel { display: inline;}
+
+.parameter-form tr.edit .opt-input { height: 30px; }
+
+.corp_id { width: auto; min-width: 200px;}
+
+.param-option { width: 120px;}

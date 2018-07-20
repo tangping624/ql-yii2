@@ -1,0 +1,20 @@
+.simple-tree * {padding:0; margin:0;font-size: 14px;}
+.simple-tree {margin:0; padding:11px; color:#222}
+.simple-tree li{padding:0; margin:0; list-style:none; line-height:30px; text-align:left; white-space:nowrap; outline:0}
+.simple-tree>li { position: relative;}
+.simple-tree li ul{ margin:0; padding:0 0 0 18px}
+.simple-tree li a {padding:1px 3px 0 0; margin:0; cursor:pointer; height:30px; color:#333; background-color: transparent;text-decoration:none; vertical-align:top; display: inline-block;}
+.simple-tree li span.button { line-height: 30px; height: 30px; width: 20px; display: inline-block; vertical-align:middle; margin: 0;position: relative; cursor: pointer;}
+.simple-tree li span.button.chk { height:16px; width:16px; background:url(../../images/global/weixin_base.png) no-repeat; margin-right: 5px;}
+
+.simple-tree li span.button.chk.checkbox_false_full {background-position:0 -286px;}
+.simple-tree li span.button.chk.checkbox_false_full_focus {background-position:0 -286px;}
+.simple-tree li span.button.chk.checkbox_false_part {background-position:0 -338px;}
+.simple-tree li span.button.chk.checkbox_false_part_focus {background-position:0 -338px;}
+.simple-tree li span.button.chk.checkbox_true_full {background-position:0 -312px;}
+.simple-tree li span.button.chk.checkbox_true_full_focus {background-position:0 -312px;}
+.simple-tree li span.button.chk.checkbox_true_part {background-position:0 -364px;}
+.simple-tree li span.button.chk.checkbox_true_part_focus {background-position:0 -364px;}
+
+.simple-tree li span.button.noline_open{background:url(../../images/global/tree_arrow_open.png) no-repeat center center;}
+.simple-tree li span.button.noline_close{background:url(../../images/global/tree_arrow_close.png) no-repeat center center;}

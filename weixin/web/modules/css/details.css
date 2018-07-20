@@ -1,0 +1,90 @@
+body{background: #fff}
+.Hcon h1{font-size: 1rem}
+.infoWrapper{    background: #f0f0f0;border-bottom: 1px solid #e6e6e6;}
+.prolist1 li{border:none}
+.dz{
+    width: 1.65rem;
+    height: 1.65rem;
+    display: inline-block;
+    position: absolute;
+    right: 2.2rem;
+    top: 0;
+}
+.dz:hover{cursor: pointer}
+.wei-dz{
+    background: url(/images/dianzan.png) no-repeat center;
+    background-size:1.1111rem auto;
+}
+.yi-dz{
+    background: url(/images/dianzan-h.png) no-repeat center;
+    background-size:1.1111rem auto;
+}
+.sc{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1.65rem;
+    height: 1.65rem;
+    display: inline-block;
+}
+.wei-sc{
+    background: url(/images/shoucang.png) no-repeat center;
+    background-size:1.1111rem auto;
+}
+.yi-sc{
+    background: url(/images/shoucang-h.png) no-repeat center;
+    background-size:1.1111rem auto;
+}
+.star1{
+    height: .67rem;
+    float: left;
+    margin-right: .3rem;
+    width:1rem;
+    height:.67rem;
+    background:url(/images/dianzan-h.png) no-repeat center;
+    background-size: .6667rem auto;
+}
+.prolist1 li .img span.imgList img{position: absolute;height: 4rem;max-width: 6.5rem;width: 100%}
+.DetItem .site em{  margin-top: 0;  }
+.DetItem{border-top:none;border-bottom: 1px solid #e6e6e6;}
+.prolist1 li .img span{display: inherit}
+.prolist1 .imgnum{bottom: -0.2rem}
+.con{padding: .56rem}
+.con div,.con p{letter-spacing: 2px;margin-top: 0.2rem}
+.con img{width: 100%;}
+/*.prolist1 li.clearfix .info{width: 52%;margin-left: 1rem;}*/
+.prolist1 .imgnum{right: 0}
+.Detbox{border-top: 0.5rem solid #f0f0f0;margin-top: 0}
+.addr{width: 90%}
+
+.overflow{
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    word-wrap: break-word;/*强制不换行*/
+    width:100%;/*不允许出现半汉字截断*/
+    height:200px;
+}
+.ellipsis2{width:90%;overflow: hidden;text-overflow: ellipsis;white-space: normal;display: -webkit-box; -webkit-line-clamp: 2;-webkit-box-orient: vertical;line-height: 1rem;}
+.prolist1 li{border-bottom: 1px solid #e6e6e6;}
+.smallImg li .img{}
+.smallImg li .img span img{width: 4.45rem;height: 3.3rem;}
+.dialog-cls-box div, .dialog-cls-box a {
+    font-family: "微软雅黑";
+}
+/*toast弹出框自定义*/
+.dialog-cls-wrap {
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 7px;
+    padding: 10px;
+}
+.dialog-msg-wrap {
+    overflow: hidden;
+    padding: 12px;
+}
+.dialog-cls-box div, .dialog-cls-box a {
+    font-family: "微软雅黑";
+}
+.dialog-msg-content {
+    font-size: 14px;
+    color: white;
+}

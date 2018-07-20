@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+//ie browser support
+$ie6 : false;
+$ie7 : false;
+$ie8 : true;
+
+//auto add prefixer
+$webkit: true !default;
+$moz: true !default;
+$ms: true !default;
+$o: true !default;
+$spec: true !default;

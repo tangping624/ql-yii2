@@ -1,0 +1,28 @@
+/* 
+* date : 2015-07-22
+ */
+ 
+body{background:#f2f3f6; font-family: "Microsoft YaHei","Helvetica";font-size: 14px;}
+.lh18{line-height:18px;}
+
+.header{max-width:640px;margin:0 auto;line-height:0;overflow:hidden;}
+.header img{width:100%;}
+
+.my-house .list {position:relative;padding-left:15px;}
+.my-house .list:before {content:'';position:absolute;z-index:2;left:0;top:0;width:100%;height:100%;box-sizing:border-box;border-bottom:solid 1px #eaebef;pointer-events:none;}
+.my-house .list .list-line {padding-right: 15px;}
+.my-house .list .list-line label.fl {width: 4em;margin-right: 0.5em;font-size:14px;color:#666;}
+.my-house .list .list-line input{color:#333;}
+
+.btn{background:#ff9c19;}
+
+
+@media only screen and (-webkit-device-pixel-ratio:1.5){
+	.my-house .list:before{top:-25%;left:-25%;width:150%;height:150%;transform:scale(0.6667);-webkit-transform:scale(0.6667);-moz-transform:scale(.67)}
+}
+@media only screen and (-webkit-device-pixel-ratio:2){
+	.my-house .list:before{top:-50%;left:-50%;width:200%;height:200%;transform:scale(.5);-webkit-transform:scale(.5);-moz-transform:scale(.5)}
+}
+@media only screen and (-webkit-device-pixel-ratio:3){
+	.my-house .list:before{top:-100%;left:-100%;width:300%;height:300%;transform:scale(.3333);-webkit-transform:scale(.3333);-moz-transform:scale(.3333)}
+}

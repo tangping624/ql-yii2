@@ -1,0 +1,88 @@
+
+a { outline: none!important;}
+.form-checkbox,
+.form-radio { font-weight: normal;}
+.form-radio .icon-radio { margin: 0;}
+.move .form-radio { width: 110px;margin: 0;}
+
+.btn-reset .btn-add { width: 106px;}
+.btn-reset .btn-pr { width: 106px; color: #222; padding: 5px 12px;}
+.btn-reset .btn-pr:hover,
+.btn-reset .btn-pr:focus { text-decoration: none; color: #222; }
+
+.m-icon { background: url(/modules/images/global/weixin_base.png) no-repeat; display: block; position: absolute; left: 50%; top: 50%; margin: -9px 0 0 -9px; width: 18px; height: 18px;}
+.m-icon.edit { background-position: 0 -5310px;}
+.m-icon.delete { background-position: 0 -4610px;}
+.m-icon.move { background-position: 0 -4946px;}
+a:hover .m-icon.edit { background-position: 0 -5338px;}
+a:hover .m-icon.delete { background-position: 0 -4638px;}
+a:hover .m-icon.move { background-position: 0 -4974px;}
+
+.m-icon.add { background-position: 0 -3447px;}
+.m-icon.add:hover { background-position: 0 -3471px;}
+
+.msg-list { border: 1px solid #e7e7eb; display: table; width: 100%; min-height: 532px;}
+.msg-list .table-cell { display: table-cell; vertical-align: top; }
+.msg-list .msg-left { width: 765px; border-right: 1px solid #e7e7eb;}
+.msg-left .head-row { padding: 10px 20px;}
+
+.head-row .group-info { float: left; line-height: 34px;}
+.head-row .group-info span,
+.head-row .group-info a { margin-right: 1em;}
+.head-row .upload-wrap { float: right;}
+.head-row .upload-wrap .tips { color:#8d8d8d; padding: 4px 10px; border: 1px solid #e7e7eb; line-height: 22px; float: left; position: relative;}
+.head-row .upload-wrap .tips:before,
+.head-row .upload-wrap .tips:after { content: ""; display: block; position: absolute; width: 0; height: 0; border: 6px solid transparent; right: -12px; top: 50%; margin-top: -6px;}
+.head-row .upload-wrap .tips:before { border-left-color: #ddd; right: -13px;}
+.head-row .upload-wrap .tips:after { border-left-color: #FFF;}
+.head-row .upload-wrap .btn-add { float: left; margin-left: 10px;}
+
+.opt-group { padding: 10px 20px; background-color: #f4f5f9; border-bottom: 1px solid #e7e7eb;}
+.opt-group label { margin-right: 2em;}
+
+.group-content { padding: 20px; overflow: hidden;}
+.group-content .group-inner { margin-right: -30px; white-space: nowrap; }
+.group-content .group-inner .m-empty { text-align: center; padding: 100px 0;}
+
+.m-item { border: 1px solid #e7e7eb; float: left; margin: 0 15px 20px 0;}
+.m-content .content-img { width: 169px; height: 170px; }
+.m-content .content-img img { width: 100%; height: 100%; }
+.m-content .content-opt { padding: 0 15px; line-height: 32px;}
+.m-content .content-opt .form-checkbox { margin: 0;}
+.m-content .content-opt .form-checkbox .icon-checkbox { margin: 0;}
+.m-content .content-opt .form-checkbox span { width: 118px; display: inline-block; overflow: hidden; text-overflow: ellipsis;}
+
+.m-option { height: 28px; line-height: 28px; background-color: #f4f4f4; border-top: 1px solid #e7e7eb;}
+.m-option a { height: 100%; position: relative;}
+.m-option a+a { border-left: 1px solid #e7e7eb;}
+
+.msg-list .msg-right { }
+.right-inner ul li,
+.right-inner .add-group { position: relative; text-indent: 16px; display: block; line-height: 32px; padding-left: 1em; text-decoration: none; color: #222; cursor: pointer;}
+.right-inner ul li.on,
+.right-inner ul li:hover,
+.right-inner .add-group:hover { background-color: #f4f5f9;}
+.right-inner .add-group .add { width: 14px; height: 14px; margin: -7px 0 0 0; left: 1em;}
+
+.page-wrap { padding: 0 20px;}
+.page-row {  padding: 20px 0; border-top: 1px solid #e7e7eb;}
+.page-row .page-box { margin: 0; text-align: right;}
+
+.process { position: relative; top: 34px;}
+.process-state { position: absolute; height: 40px; border: 1px solid #e7e7eb; background: #FFF; line-height: 40px; font-size: 14px; z-index: 10; padding:0 20px; right: 0;}
+.process-state div {  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; float: left;}
+.process-state .wrap { width: 100%; height: 100%; text-align: center;}
+.process-state .wrap .file-info .file-name{ width: 100px;}
+.process-state .wrap .file-info .file-size { width: 80px;}
+.process-state .wrap .bar-wrap { width: 200px; height: 100%; float: left;}
+.process-state .wrap .bar-wrap .bar { height: 6px; background: #5AA1DD; margin: 16px 0; width: 0;}
+.process-state .wrap .cancel { float: left; display: block;}
+
+.process-state .process-tips { display: none; padding-right: 24px; background: url(/frontend/images/global/process-white.gif) no-repeat right center;}
+.process-state.waiting .wrap { display: none; }
+.process-state.waiting .process-tips { display: block; }
+
+/* 屏蔽批量 */
+.form-checkbox .icon-checkbox,
+.opt-group * { display: none;}
+.moxie-shim input[type=file] { width: 106px!important;}

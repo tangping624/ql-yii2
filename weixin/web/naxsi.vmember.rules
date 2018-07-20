@@ -1,0 +1,9 @@
+BasicRule wl:1315 "mz:$HEADERS_VAR:cookie";
+BasicRule wl:1315 "mz:$ARGS_VAR:redirect";
+BasicRule wl:1015 "mz:$HEADERS_VAR:cookie";
+BasicRule wl:1009 "mz:$ARGS_VAR:return_uri";
+BasicRule wl:1009 "mz:$BODY_VAR:signurl";
+BasicRule wl:1100 "mz:$ARGS_VAR:return_uri";
+BasicRule wl:1100 "mz:$BODY_VAR:signurl";
+BasicRule wl:1000 "mz:$ARGS_VAR:from_id|NAME";
+BasicRule wl:1000 "mz:$URL_X:/([^/\w+])/member/membership/verify-owner|$ARGS_VAR:from|NAME";

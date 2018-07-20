@@ -1,0 +1,57 @@
+
+/*.img-tips { margin-bottom: 10px;}*/
+
+/*.img-area { height: 100px; position: relative;}
+.img-area .view-area { display: none; height: 100px; width: 171px; position: relative; z-index: 1;}
+.img-area.pic .view-area { display: block;}
+.img-area.pic .upload-area { display: none;}
+.img-wrap { width: 171px; margin: 0;}
+.img-wrap .per { width: 80px;}*/
+
+/*.view-area img { height: 100%; width: 100%; border: 1px solid #d3d3d3; }
+.view-area a.del-img-btn { display: none; height: 20px; background: #e8e5e5; position: absolute; bottom: 0; width: 100%;}
+.view-area a.del-img-btn .b-icon { display: block; background: url(/modules/images/global/icon-merge.png) no-repeat  -315px 0; width: 16px; height: 16px; position: absolute; left: 50%; margin-left: -8px;}
+.view-area:hover a.del-img-btn { display: block;}*/
+
+/*.upload-btn { width: 171px; height: 100px; border: 1px dashed #d3d3d3; position: relative; margin-top: 10px; display: block;}*/
+/*.upload-btn .line-base { position: absolute; left: 50%; top: 50%; background: #ddd;}*/
+/*.upload-btn:hover .line-base { background: #aaa;}*/
+/*.upload-btn .v-line { width: 2px; height: 20px; margin: -10px 0 0 -1px;}*/
+/*.upload-btn .h-line { width: 20px; height: 2px; margin: -1px 0 0 -10px;}*/
+
+.corp_id { width: auto; min-width: 200px;}
+.img-wraps { position: relative;}
+.img-wraps img { width: 300px; height: 176px; margin-bottom: 8px; border:1px solid #E7E6EB;}
+.img-wrap { width: 300px; height: 176px;}
+.img-wrap .img-box { height: 100%;}
+.img-wrap p { margin-top: 60px;}
+.img-wrap .per { width: 240px;}
+.moxie-shim input[type=file] { width: 90px!important;}
+.padT5 { padding-top: 5px;}
+.mr50{margin-right:50px;}
+.opt-hide{display: none;}
+
+.sort_list td span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.w1 { width: 3em;}
+.w2 { width: 6em;}
+.w3 { width: 4em;}
+.w4 { width: 8em;}
+.w5 { width: 8em;}
+
+.ui-sortable-helper { background: #f4f5f9; width: 100%; border-bottom: 1px solid #e3e3e3;}
+
+.glyphicon-th-list { text-decoration: none!important;}
+
+.color-picker { height: 20px; border: 1px solid #ccc; position: relative;float: left; padding: 1px 15px 1px 1px; cursor: pointer;}
+.color-picker>div{ width: 18px; height: 100%; border:1px solid #E7E6EB;}
+.color-picker:after { content: ''; display: block; border:4px solid transparent; border-top-color: #999; width: 0; height: 0; position: absolute; right: 3px; top: 50%; margin-top: -2px;}
+
+.card-no { position: absolute; margin: 15px;}
+.card-no.left-top { left: 0; top: 0;}
+.card-no.right-top { right: 0; top: 0;}
+.card-no.left-bottom { left: 0; bottom: 0;}
+.card-no.right-bottom { right: 0; bottom: 0;}
+
+.grid .grid-toolbar .grid-btns{ background-color: #fff;border: none; }
+
+th, td{text-align: center;}

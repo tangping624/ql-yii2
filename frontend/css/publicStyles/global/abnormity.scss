@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+@import '../module/_base.scss';
+
+.abnormity-page{
+	background-color: #fff;
+	height: 100%;
+	//position: relative;
+	// .ap-header{
+	// 	border-bottom: 1px solid #d9dadc;
+	// 	.inner{
+	// 		@extend %centerBlock;
+	// 		width:1200px;
+	// 		@extend %clearfix;
+	// 	}
+	// 	.ap-logo{
+	// 		font-size: 22px;
+	// 		@extend %fl;
+	// 		@include vCenter(60px);
+	// 	}
+	// 	.ap-info{
+	// 		font-size: 14px;
+	// 		@extend %fr;
+	// 		@include vCenter(60px);
+	// 		a{
+	// 			color:#51a1ed;
+	// 		}
+	// 	}
+	// }
+	.ap-container{
+		height: 100%;
+		width: 1200px;
+		margin-left:auto;
+		margin-right: auto;
+		position: relative;
+		.btn-success{
+			position: absolute;
+			top:50%;
+			left:50%;
+		}
+		&.inner-abnormity{
+			.abnormity-bg{
+				background: url(/frontend/images/global/inner-abnormity.png) no-repeat;
+				position: absolute;
+				height: 336px ;
+				width: 550px;
+				left:50%;
+				top:50%;
+				margin: -198px 0 0 -275px;
+			}
+			.btn-success{
+				margin: 168px 0 0 -152px;
+			}
+		}
+		&.no-authority{
+			.authority-bg{
+				background: url(/frontend/images/global/no-authority.png) no-repeat;
+				position: absolute;
+				height: 382px ;
+				width: 588px;
+				left:50%;
+				top:50%;
+				margin: -221px 0 0 -299px;
+			}
+			.btn-success{
+				margin: 191px 0px 0px -156px;
+			}
+		}
+		&.error-page{
+			.error-bg{
+				background: url(/frontend/images/global/error-page.png) no-repeat;
+				position: absolute;
+				height: 410px ;
+				width: 620px;
+				left:50%;
+				top:50%;
+				margin: -235px 0 0 -310px;
+			}
+			.btn-success{
+				margin:205px 0 0 -174px;
+			}
+		}
+	}
+}

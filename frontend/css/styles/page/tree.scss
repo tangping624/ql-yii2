@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+@import '../module/_base.scss';
+
+.user-list{
+	display: table-cell;
+	width: 672px;
+	border-left:1px solid #e7e6eb;
+	margin-left: 258px;
+}
+
+.js-tree-popup-radio{
+	height: 300px;
+	overflow-y:auto;
+}
+
+.popup-panel{
+	background-color:#fff;
+	border:1px solid #d9dadc;
+	margin-right:-420px;
+	position: absolute;
+	top:-1px;
+	right:0;
+	bottom:-1px;
+	width: 418px;
+	z-index: 1000;
+	.pp-head{
+		background-color: #f4f5fa;
+		border-bottom:1px solid #d9dadc;
+		font-size: 16px;
+		@include vCenter(52px);
+		text-align: center;
+		position: relative;
+		.fonticon-remove{
+			color:#b0b0ae;
+			cursor: pointer;
+			font-size: 24px;
+			position: absolute;
+			right: 10px;
+			top:50%;
+			height: 30px;
+			width: 30px;
+			margin:-15px 0 0 0;
+			&:before{
+				position: absolute;
+				height: 24px;
+				width: 24px;
+				top:50%;
+				left:50%;
+				margin:-12px 0 0 -12px;
+			}
+			&:hover{
+				color:#ee8756;
+			}
+		}
+		em{
+			font-style: normal;
+		}
+	}
+	.pp-content{
+		position: absolute;
+		top:53px;
+		bottom:50px;
+		left:0;
+		right: 0;
+		overflow-y:auto;
+	}
+	.user-infor{
+		padding: 30px 35px;
+		.ui-first{
+			padding-bottom: 30px;
+		}
+		.ui-name{
+			font-size: 24px;
+		}
+		.ui-item{
+			overflow:hidden;
+			span{
+				@include vCenter(30px);
+			}
+		}
+		.ui-label{
+			color:#888;
+			@extend %fl;
+			width: 80px;
+			text-align: right;
+		}
+		.ui-info{
+			display: block;
+			margin-left: 90px;
+		}
+	}
+	.pp-toolbar{
+		background-color: #f4f5fa;
+		border-top:1px solid #d9dadc;
+		position: absolute;
+		bottom:0;
+		left:0;
+		right: 0;
+		padding:8px 15px 8px 0;
+		text-align: right;
+		.btn{
+			margin-left:5px;
+		}
+	}
+
+	.batch-choose-user-wrap{
+		overflow:hidden;
+		padding: 0 30px 15px 30px;
+	}
+	.batch-choose-user{
+		list-style: none;
+		padding: 0;
+		margin-right: -15px;
+		.bcu-item{
+			border-radius: 3px;
+			background-color: #e8e7ec;
+			@include boxSizing(content-box);
+			@extend %fl;
+			margin:15px 15px 0 0;
+			max-width: 56px;
+			@include vCenter(24px);
+			@extend %textEps;
+			padding: 0 24px 0 5px;
+			position: relative;
+			.fonticon-remove{
+				cursor: pointer;
+				font-style: normal;
+				font-size: 16px;
+				position: absolute;
+				height: 24px;
+				width:24px;
+				right: 0;
+				top:0;
+				text-align: center;
+				&:before{
+					font-size: 16px;
+					@include vCenter(24px);
+				}
+				&:hover{
+					color:#ee8756;
+					&:before{
+						content: '\e604';
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+}

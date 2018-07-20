@@ -1,0 +1,135 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button,input,textarea,form,th,td,figure{margin:0;padding:0}
+
+/* 重置默认字体和大小 */
+body{font-family:STHeiti,Microsoft YaHei,Helvetica,Arial,sans-serif; color:#444; background:#f0f0f0!important; line-height:1;max-width: 640px;margin-right: auto!important;margin-left: auto!important;overflow-x: hidden}
+header{max-width: 640px;margin: 0 auto;left: auto;right: auto;width: 100%;}
+.rankbox{max-width: 640px;margin: 0 auto;}
+.rankbox li{list-style: none;}
+header  h1{font-size: 1rem !important;}
+.scroll-wrap{max-width: 640px;}
+h1,h2,h3,h4,h5,h6,b{font-size:100%;font-weight:normal}
+em{font-style:normal}
+strong{font-weight:700}
+button,input,select,textarea{font-size:100%;font-family:Helvetica,Arial,sans-serif; -moz-appearance:none; -ms-progress-appearance:none; -webkit-appearance:none;}
+/*重置文本格式*/
+a{text-decoration:none; color:#333;}
+q:before,q:after{content:""}
+/* 重置表格元素 */
+table{border-collapse:collapse;border-spacing:0}
+/* 去除默认边框 */
+fieldset,img{border:none}
+/* 重置列表元素 */
+ul,ol{list-style:none}
+/* 媒体元素 */
+audio:not([controls]){display:none;height:0}
+.display-flex,.wap-app > ul{display:-moz-box;display:-webkit-box;display:-webkit-flex;display:-moz-flex;display:-ms-flexbox;display:-ms-flex;display:flex}
+.flex-box,.search-page .search-input{display:-moz-box;display:-webkit-box;display:-webkit-flex;display:-moz-flex;display:-ms-flexbox;display:-ms-flex;display:flex}
+/* float */
+.fd-left{float:left}
+.fd-right{float:right}
+.fd-clear{clear:both}
+.fd-clr:after{display:block;clear:both;height:0;content:"\0020"}
+.clearfix:before,.clearfix:after{content:" ";display:table;}
+.clearfix:after{clear:both;}
+/* display */
+.fd-hide{display:none}
+.fd-show{display:block}
+.dib{display: inline-block;}
+.fd-tabe{ display:table; width:100%;}
+/* 禁止长按链接与图片弹出菜单 */
+img{ vertical-align:middle;}
+a,img {-webkit-touch-callout: none;}
+a{-webkit-tap-highlight-color: rgba(0,0,0,0)}
+.fd-tl{ text-align:left;}
+.fd-tc{ text-align:center;}
+.fd-tr{ text-align:right;}
+/* position */
+.fd-locate{position:relative}
+
+/* text */
+.fd-bold{font-weight:700}
+.fd_tl{ text-align:left;}
+.fd_tc{ text-align:center;}
+.fd_tr{text-align:right;}
+
+.fs20{ font-size:.56rem;}
+.fs24{ font-size:.67rem;}
+.fs28{ font-size:.78rem;}
+
+/* background */
+.nobg{ background:none!important;}
+.bg-white{ background:#fff;}
+.bg-pink{ background:#ff7374;}
+.bg-blue{ background:#7ccae1;}
+.bg-green{ background:#79cf57;}
+.bg-blue2{ background:#5ad9c8;}
+.bg-org{ background:#f47920;}
+/* color */
+.blue{ color:#7ccae1;}
+.lightgray{ color:#666;}
+.gray{ color:#999;}
+.black{ color:#444;}
+.org{ color:#f47920;}
+/* padding */
+.padt1{ padding-top:2.45rem;}
+.padt2{ padding-top:4.73rem;}
+.padt21{ padding-top:0rem;}
+.padb1{ padding-bottom:2.7rem;}
+/* margin */
+.mart0{ margin-top:0!important;}
+.mart1{ margin-top:.55rem;}
+.mar1{ margin:0.3rem 0;}
+.mar2{ margin:1rem 0 0.3rem 0;}
+/* width */
+
+/* border */
+.nobd{ border:none!important;}
+.borb1{ border-bottom:1px solid #e6e6e6;}
+
+.inptxt1{ width:100%; border:0; font-size:.78rem; color:#444;}
+
+/* 设置元素的盒模型为border-box */
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+/* 设置元素的盒模型为flex */
+.flex{ display:-webkit-box;display:-moz-box;display:-webkit-flex;display:flex;display: -ms-flexbox;}
+.flex .flex_div{-webkit-box-flex:1;-moz-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1 1 0; }
+#menu .align-c{padding:50px 0;margin:0 -0.56rem;background:#f0f0f0;}
+/*去除元素周围的虚线*/
+*:focus{outline:none}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+color: #aaa; 
+} 
+input:-moz-placeholder, textarea:-moz-placeholder { 
+color: #aaa; 
+} 
+input::-moz-placeholder, textarea::-moz-placeholder { 
+color: #aaa; 
+} 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+color: #aaa; 
+} 
+
+
+html{ font-size:36px;}
+/*------------------------CSS Media Queries--------------------------------*/
+
+@media screen and (max-width:319px){
+html{ font-size:15px;}
+}
+@media screen and (min-width: 320px) and (max-width: 379px){
+html{ font-size:18px;}
+}
+@media screen and (min-width: 380px) and (max-width: 429px){
+html{ font-size:21.375px;}
+}
+@media screen and (min-width: 430px) and (max-width: 479px){
+html{ font-size:24.1875px;}
+}
+
+@media screen and (min-width: 480px) and (max-width: 639px){
+html{ font-size:27px;}
+}
+
+
+

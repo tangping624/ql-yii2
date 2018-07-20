@@ -1,0 +1,29 @@
+/* 
+* date : 2015-07-22
+ */
+ 
+body{background:#f2f3f6; font-family: "Microsoft YaHei","Helvetica";font-size: 14px;}
+.orange{color:#f80;}
+
+.plate{background:#fff;margin-bottom:15px;}
+.plate .hd{position:relative;padding-left:15px;color:#999;line-height:43px;overflow:hidden;}
+.plate .hd:before{content:'';position:absolute;bottom:0;left:15px;box-sizing:border-box;width:100%;height:1px;border-bottom:solid 1px #eaebef;}
+.plate .bd{padding:10px 15px;}
+.plate .bd .item{padding-left:100px;line-height:30px;min-height:30px;color:#333;}
+.plate .bd .label{float:left;margin-left:-100px;color:#888;}
+
+.code_img{line-height:0;}
+.code_img_note{color:#ccc;}
+.code_img img{width:133px;}
+
+.item_line{padding:0 15px 0;}
+
+@media only screen and (-webkit-device-pixel-ratio:1.5){
+	.plate .hd:before{transform:scaleY(.67);-webkit-transform:scaleY(.67);-moz-transform:scaleY(.67)}
+}
+@media only screen and (-webkit-device-pixel-ratio:2){
+	.plate .hd:before{transform:scaleY(.5);-webkit-transform:scaleY(.5);-moz-transform:scaleY(.5)}
+}
+@media only screen and (-webkit-device-pixel-ratio:3){
+	.plate .hd:before{transform:scaleY(.33);-webkit-transform:scaleY(.33);-moz-transform:scaleY(.33)}
+}

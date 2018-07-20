@@ -1,0 +1,55 @@
+
+/* tree diy */
+.js-tree {background-color: #fff;overflow-x: hidden; overflow-y: auto; position: relative;}
+.js-tree .empty { height: 20px; width: 4em; line-height: 20px; position: absolute; left: 50%; top: 50%; margin: -10px 0 0 -2em;}
+
+.js-tree .tree-item.open > .tree-node .tree-arrow:before, .js-tree .tree-arrow:before, .title-tips:before, .title-tips.b-tips:before {content: '';height: 0;width: 0;position: absolute}
+.js-tree .tree-item.open > .tree-node .tree-arrow:before, .js-tree .tree-arrow:before, .title-tips:before, .title-tips.b-tips:before {content: '';height: 0;width: 0;position: absolute}
+.js-tree .tree-node, .public-select-panel .ps-opera .pso-text {overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
+.js-tree {background-color: #fff;overflow-x: hidden}
+.js-tree .tree-list {list-style: none;margin: 0;padding: 0}
+.js-tree .tree-item {position: relative;min-height: 30px}
+.js-tree .tree-item > .tree-list {display: none}
+.js-tree .tree-item.open > .tree-list {display: block}
+.js-tree .tree-item.open > .tree-node .tree-arrow:before {border: 6px solid transparent;border-color: #999 transparent transparent transparent;border-bottom-width: 0;margin: -3px 0 0 -6px}
+.js-tree .tree-node {cursor: pointer;padding: 0 0 0 10px}
+.js-tree .tree-node:hover,
+.js-tree .tree-node.node-bg {background-color: #e7e7eb;}
+.js-tree .tree-node:hover .tree-opera,
+.js-tree .tree-node.node-bg .tree-opera {background: #f4f5fa}
+.js-tree .tree-node.disable {background-color: transparent;cursor: text}
+.js-tree .tree-arrow {cursor: pointer;display: inline-block;height: 30px;width: 20px;position: relative;vertical-align: middle}
+.js-tree .tree-arrow:before {border: 6px solid transparent;border-color: transparent transparent transparent #999;border-right-width: 0;left: 50%;top: 50%;margin: -6px 0 0 -3px  }
+.js-tree .tree-text { display: inline-block; height: 30px; line-height: 30px; position: relative; vertical-align: middle;}
+/*is_checked*/
+/*.js-tree .tree-text:before { content: ""; width: 16px; height: 16px; background: url(/frontend/images/global/weixin_base.png) no-repeat 0 -286px;  display: inline-block; vertical-align: middle; position: relative; margin-right: 3px;}*/
+/*.js-tree .selected .tree-text:before {  background-position: 0 -312px;}*/
+.js-tree .tree-blank { display: inline-block; height: 30px; width: 20px; vertical-align: middle;}
+.js-tree .tree-opera { display: none;}
+
+/*.inner-wrap { padding: 30px;}*/
+
+.selected_row {min-height: 32px; border: 1px solid #e7e7eb; max-height: 122px; margin-bottom: 25px; padding: 0 3px; overflow-x: hidden; overflow-y: auto;}
+.selected_row .select-item { background: #e7e7eb; border-radius: 3px; padding: 0 5px; line-height: 22px; margin: 2px; position: relative; display: block; float: left;}
+.selected_row .select-item .close-btn { position: relative; top:2px; display: inline-block; font-size: 20px; cursor: pointer; color: #999;}
+.selected_row .select-item .close-btn:hover { color: #222; }
+
+.table-wrap { width: 100%; border-collapse: separate!important; border:1px solid #e7e7eb;}
+.table-wrap td>* { height: 300px; overflow-x:hidden; overflow-y:auto; cursor: pointer; vertical-align: top;}
+.table-wrap th { min-width: 250px; border-bottom: 1px solid #e7e7eb; vertical-align: middle; font-weight: normal;}
+.table-wrap th:last-child { background-color: #f4f5fa; text-align: center;}
+.table-wrap th+th, .table-wrap td+td { border-left: 1px solid #e7e7eb;}
+.table-wrap th .form-control { border:none;}
+.table-wrap th .search-icon { border-width:0 0 0 1px;}
+.table-wrap td .area-empty,
+.table-wrap td .area-item { height: 30px; line-height: 30px; padding: 0 15px;}
+.table-wrap td .area-item.active,
+.table-wrap td .area-item:hover { background-color: #E7E7EB;}
+.table-wrap td .room-empty,
+.table-wrap td .room-item { line-height: 36px; padding:0 32px 0 15px; border-bottom: 1px solid #e7e7eb; position: relative;}
+.table-wrap th>span.check-all { width: 16px; height: 16px; position: absolute; right: 15px; top:50%; margin-top: -8px; cursor: pointer;}
+.table-wrap th>span.check-all,
+.table-wrap td .room-item:after { content: ""; width: 16px; height: 16px; background: url(/frontend/images/global/weixin_base.png) no-repeat 0 -286px;  display: inline-block; vertical-align: middle; position: absolute; right: 15px; top: 50%; margin-top: -8px;}
+.table-wrap th>span.check-all.on,
+.table-wrap td .room-item.on:after { background-position: 0 -312px;}
+.table-wrap td .room-item:hover { background-color: #f4f5fa;}

@@ -1,0 +1,30 @@
+<phpunit
+        backupGlobals="false"
+        backupStaticAttributes="false"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        processIsolation="false"
+        stopOnFailure="false"
+        syntaxCheck="false"
+        bootstrap="unit_autoload.php">
+    <testsuites>
+        <testsuite name="app_membercenter">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./services</directory>
+            <directory suffix=".php">./modules/member/services</directory>
+            <directory suffix=".php">./modules/signup/services</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="./runtime/test/app/codeCoverage" charset="UTF-8"
+             yui="true" highlight="true"
+             lowUpperBound="50" highLowerBound="80"/>
+        <log type="testdox-html" target="./runtime/test/log/app_test.html" />
+    </logging>
+</phpunit>

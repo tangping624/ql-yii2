@@ -1,0 +1,31 @@
+<?php
+
+return [
+    'pathMap' => [
+        '@app/views/layouts' => '@app/views/default/layouts',
+        '@app/views' => '@app/views/default', 
+        '@app/modules/basic/views' => '@app/modules/basic/views/default', 
+        '@app/modules/api/views' => '@app/modules/api/views/default',
+        '@app/modules/system/views' => '@app/modules/system/views/default', 
+         '@app/modules/appapi/views' => '@app/modules/appapi/views/default',
+        '@app/modules/city/views' => '@app/modules/city/views/default',
+        '@app/modules/advertise/views' => '@app/modules/advertise/views/default',
+        '@app/modules/merchant/views' => '@app/modules/merchant/views/default',
+        '@app/modules/type/views' => '@app/modules/type/views/default',
+        '@app/modules/member/views' => '@app/modules/member/views/default',
+        '@app/modules/baike/views' => '@app/modules/baike/views/default',
+        '@app/modules/tour/views' => '@app/modules/tour/views/default',
+        '@app/modules/lobby/views' => '@app/modules/lobby/views/default',
+        '@app/modules/news/views' => '@app/modules/news/views/default',
+        '@app/modules/house/views' => '@app/modules/house/views/default',
+        '@app/modules/shop/views' => '@app/modules/shop/views/default',
+        '@app/modules/common/views' => '@app/modules/common/views/default',
+        '@app/modules/cooperation/views' => '@app/modules/cooperation/views/default',
+        '@app/modules/invest/views' => '@app/modules/invest/views/default',
+        '@app/modules/migrate/views' => '@app/modules/migrate/views/default',
+        '@app/modules/repast/views' => '@app/modules/repast/views/default',
+        '@app/modules/serve/views' => '@app/modules/serve/views/default',
+        '@app/modules/sports/views' => '@app/modules/sports/views/default',
+        '@app/modules/vip/views' => '@app/modules/vip/views/default',
+    ],
+];
